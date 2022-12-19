@@ -1,0 +1,9 @@
+{
+  "name": "@plugins/easemob",
+  "main": "src/index.ts",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "easemob-websdk": "^4.1.2"
+  }
+}
