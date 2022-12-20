@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="CircleChannelCell" rowHeight="80" id="gtI-iY-F72" customClass="CircleChannelCell" customModule="Yellow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gtI-iY-F72" id="Fq1-LU-sL5">
+                <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsH-c0-QxF">
+                        <rect key="frame" x="23" y="15" width="20" height="20"/>
+                        <color key="backgroundColor" name="colorAccent"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="8Lp-GI-UJc"/>
+                            <constraint firstAttribute="width" secondItem="CsH-c0-QxF" secondAttribute="height" id="G1A-cP-wQT"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黄鱼遇用户反馈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEE-pX-rN4">
+                        <rect key="frame" x="51" y="15" width="262.66666666666669" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-ye-M3m">
+                        <rect key="frame" x="23.000000000000004" y="43" width="35.333333333333343" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfP-kj-Ay0" customClass="BadgeSwift" customModule="BadgeSwift">
+                        <rect key="frame" x="298.33333333333331" y="28" width="24.333333333333314" height="24.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                <color key="value" systemColor="systemRedColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="insets">
+                                <size key="value" width="2" height="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vfP-kj-Ay0" firstAttribute="centerY" secondItem="Fq1-LU-sL5" secondAttribute="centerY" id="0V9-Et-ojt"/>
+                    <constraint firstItem="vfP-kj-Ay0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3B1-ye-M3m" secondAttribute="trailing" id="9Db-jn-AaA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uEE-pX-rN4" secondAttribute="trailing" constant="9" id="CkA-gg-YCu"/>
+                    <constraint firstItem="CsH-c0-QxF" firstAttribute="leading" secondItem="Fq1-LU-sL5" secondAttribute="leadingMargin" constant="3" id="CuF-Ku-jsA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vfP-kj-Ay0" secondAttribute="trailing" id="GnJ-ck-kFY"/>
+                    <constraint firstItem="3B1-ye-M3m" firstAttribute="leading" secondItem="CsH-c0-QxF" secondAttribute="leading" id="HTy-Q7-QNM"/>
+                    <constraint firstItem="3B1-ye-M3m" firstAttribute="top" secondItem="CsH-c0-QxF" secondAttribute="bottom" constant="8" symbolic="YES" id="adn-RX-t0d"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3B1-ye-M3m" secondAttribute="trailing" constant="20" symbolic="YES" id="byV-Jr-VGJ"/>
+                    <constraint firstItem="CsH-c0-QxF" firstAttribute="top" secondItem="Fq1-LU-sL5" secondAttribute="topMargin" constant="4" id="dSW-7n-Htr"/>
+                    <constraint firstItem="uEE-pX-rN4" firstAttribute="leading" secondItem="CsH-c0-QxF" secondAttribute="trailing" constant="8" id="jzw-A2-Jtn"/>
+                    <constraint firstItem="uEE-pX-rN4" firstAttribute="centerY" secondItem="CsH-c0-QxF" secondAttribute="centerY" id="oHx-j6-0dr"/>
+                    <constraint firstAttribute="bottom" secondItem="3B1-ye-M3m" secondAttribute="bottom" constant="20" symbolic="YES" id="uie-fL-ADQ"/>
+                    <constraint firstItem="uEE-pX-rN4" firstAttribute="top" secondItem="CsH-c0-QxF" secondAttribute="top" id="uvZ-g7-Nd7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="colorView" destination="CsH-c0-QxF" id="pqY-ax-wPj"/>
+                <outlet property="descLabel" destination="3B1-ye-M3m" id="xri-W9-kRu"/>
+                <outlet property="nameLabel" destination="uEE-pX-rN4" id="vXA-6F-y43"/>
+                <outlet property="unreadLabel" destination="vfP-kj-Ay0" id="rSq-TV-LPu"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="20"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="vfP-kj-Ay0">
+            <size key="intrinsicContentSize" width="24.333333333333332" height="24.333333333333332"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="colorAccent">
+            <color red="0.16470588235294117" green="0.61568627450980395" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
