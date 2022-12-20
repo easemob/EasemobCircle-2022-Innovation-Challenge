@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendInviteViewController" customModule="discord_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="tsK-ZZ-onU" id="OC2-A2-IOb"/>
+                <outlet property="textField" destination="4nw-DX-Huy" id="63L-XB-Tai"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-1h-Ulu">
+                    <rect key="frame" x="16" y="53" width="382" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_white" translatesAutoresizingMaskIntoConstraints="NO" id="mQ9-iR-qnh">
+                            <rect key="frame" x="10" y="5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="mQ9-iR-qnh" secondAttribute="height" id="wbL-Gd-K6s"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索好友" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nw-DX-Huy">
+                            <rect key="frame" x="35" y="0.0" width="347" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="vvU-uE-Rbl"/>
+                            </constraints>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mQ9-iR-qnh" firstAttribute="centerY" secondItem="9gc-1h-Ulu" secondAttribute="centerY" id="3kH-A1-xlr"/>
+                        <constraint firstItem="mQ9-iR-qnh" firstAttribute="leading" secondItem="9gc-1h-Ulu" secondAttribute="leading" constant="10" id="BXi-9X-j6p"/>
+                        <constraint firstAttribute="bottom" secondItem="4nw-DX-Huy" secondAttribute="bottom" id="NF4-r9-beS"/>
+                        <constraint firstAttribute="height" constant="30" id="X7C-5F-E4S"/>
+                        <constraint firstItem="4nw-DX-Huy" firstAttribute="leading" secondItem="mQ9-iR-qnh" secondAttribute="trailing" constant="5" id="kCQ-23-3K6"/>
+                        <constraint firstAttribute="trailing" secondItem="4nw-DX-Huy" secondAttribute="trailing" id="lCM-Yc-Dwe"/>
+                        <constraint firstItem="4nw-DX-Huy" firstAttribute="top" secondItem="9gc-1h-Ulu" secondAttribute="top" id="roJ-gf-tag"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tsK-ZZ-onU">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rSd-8z-dGt"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="#181818"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tsK-ZZ-onU" secondAttribute="bottom" id="HCk-Pm-uxk"/>
+                <constraint firstItem="9gc-1h-Ulu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KPj-Ll-Bet"/>
+                <constraint firstItem="tsK-ZZ-onU" firstAttribute="top" secondItem="9gc-1h-Ulu" secondAttribute="bottom" constant="9" id="OAJ-6e-WGe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9gc-1h-Ulu" secondAttribute="trailing" constant="16" id="UCO-R0-rMb"/>
+                <constraint firstItem="tsK-ZZ-onU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VAk-W0-ElK"/>
+                <constraint firstItem="9gc-1h-Ulu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="9" id="g2P-JG-5fg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tsK-ZZ-onU" secondAttribute="trailing" id="v3U-7M-Cvv"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="132"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search_white" width="20" height="20"/>
+        <namedColor name="#181818">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
