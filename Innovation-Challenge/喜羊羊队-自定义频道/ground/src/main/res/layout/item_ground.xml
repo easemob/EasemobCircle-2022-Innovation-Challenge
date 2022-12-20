@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="234dp"
+    android:paddingLeft="6dp"
+    android:paddingTop="6dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp">
+
+    <io.agora.service.widget.RadiuImageView
+        android:id="@+id/iv_server"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cover03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:radius="8dp" />
+
+    <io.agora.ground.widget.BlurringView
+        android:id="@+id/bv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:blurRadius="20"
+        app:bottom_left_radius="8dp"
+        app:bottom_right_radius="8dp"
+        app:downsampleFactor="6"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_server"
+        app:layout_constraintLeft_toLeftOf="@id/ll_bg"
+        app:layout_constraintRight_toRightOf="@id/ll_bg"
+        app:layout_constraintTop_toTopOf="@id/ll_bg"
+        app:overlayColor="#60000000" />
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/iv_server"
+        app:layout_constraintLeft_toLeftOf="@id/iv_server"
+        app:layout_constraintRight_toRightOf="@id/iv_server">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tool:text="好大的社区" />
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="12dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tool:text="这个社区很有意思的" />
+
+    </LinearLayout>
+
+    <com.hyphenate.easeui.widget.EaseImageView
+        android:id="@+id/iv_server_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="16dp"
+        app:ease_border_color="#30000000"
+        app:ease_border_width="0dp"
+        app:ease_shape_type="round"
+        app:layout_constraintBottom_toTopOf="@id/ll_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_bg" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+pluginManagement {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        google()
+        mavenCentral()
+        // 添加maven
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = "Circle"
+include ':app'
+include ':common'
+include ':service'
+include ':login'
+include ':home'
+include ':contacts'
+include ':ground'
+include ':mine'
+include ':chat'
+include ':circle-im-kit'
+//include ':ease-im-kit'
+//project(':ease-im-kit').projectDir = new File('../huanxin/publish/3.9.4-pre/release-discord/easeui/ease-im-kit')
+
+//temp for compile
+//内部使用，demo直接依赖aar，不需要依赖下面的module, release时需要把下面的include相关的两行注释掉
+//include ':hyphenatechatsdk'
+//project(':hyphenatechatsdk').projectDir = new File('../huanxin/publish/3.9.4-pre/release-discord/emclient-android/hyphenatechatsdk')
+//include ':ease-linux'
+//project(':ease-linux').projectDir = new File('../huanxin/publish/3.9.4-pre/release-discord/emclient-linux')
+
+

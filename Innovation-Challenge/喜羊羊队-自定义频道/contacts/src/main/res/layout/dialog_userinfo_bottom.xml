@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_black_top_half_radius4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="214dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.hyphenate.easeui.widget.EaseImageView
+                android:id="@+id/iv_user_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/circle_default_avatar"
+                app:ease_shape_type="round"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.hyphenate.easeui.widget.EaseImageView
+                android:id="@+id/iv_presence"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:scaleType="centerCrop"
+                app:ease_border_color="@color/black_141414"
+                app:ease_border_width="3dp"
+                app:ease_shape_type="round"
+                app:layout_constraintBottom_toBottomOf="@id/iv_user_avatar"
+                app:layout_constraintRight_toRightOf="@id/iv_user_avatar"
+                tools:src="@drawable/ease_presence_online" />
+
+
+            <TextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/tv_id"
+                app:layout_constraintLeft_toRightOf="@id/iv_user_avatar"
+                app:layout_constraintTop_toTopOf="@id/iv_user_avatar"
+                tools:text="Tom" />
+
+            <ImageView
+                android:id="@+id/iv_mute"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/circle_member_mute"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tv_nick_name"
+                app:layout_constraintLeft_toRightOf="@id/tv_nick_name"
+                app:layout_constraintTop_toTopOf="@id/tv_nick_name" />
+
+            <TextView
+                android:id="@+id/tv_role_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/selector_green_purple_radius17"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/circle_role_moderator"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/iv_mute"
+                app:layout_constraintLeft_toRightOf="@id/iv_mute"
+                app:layout_constraintTop_toTopOf="@id/iv_mute" />
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/iv_user_avatar"
+                app:layout_constraintLeft_toLeftOf="@id/tv_nick_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_nick_name"
+                tools:text="环信ID" />
+
+            <TextView
+                android:id="@+id/tv_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:drawableTop="@drawable/circle_chat"
+                android:drawablePadding="14dp"
+                android:text="@string/dialog_to_chat"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_mute"
+                app:layout_constraintTop_toBottomOf="@id/iv_user_avatar" />
+
+            <TextView
+                android:id="@+id/tv_mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/circle_member_mute"
+                android:drawablePadding="14dp"
+                android:text="@string/dialog_member_mute"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/tv_chat"
+                app:layout_constraintRight_toLeftOf="@id/tv_set_role"
+                app:layout_constraintTop_toTopOf="@id/tv_chat" />
+
+            <TextView
+                android:id="@+id/tv_set_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/circle_make_admin"
+                android:drawablePadding="14dp"
+                android:text="@string/dialog_set_admin"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/tv_mute"
+                app:layout_constraintRight_toLeftOf="@id/tv_kick"
+                app:layout_constraintTop_toTopOf="@id/tv_chat" />
+
+            <TextView
+                android:id="@+id/tv_kick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/circle_kick_channel"
+                android:drawablePadding="14dp"
+                android:text="@string/dialog_kick_channel"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/tv_set_role"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_chat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

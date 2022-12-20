@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_right_margin">24dp</dimen>
+    <dimen name="app_left_margin">24dp</dimen>
+    <dimen name="app_right_padding">16dp</dimen>
+    <dimen name="app_left_padding">16dp</dimen>
+    <dimen name="circle_statusbar_height">36dp</dimen>
+</resources>

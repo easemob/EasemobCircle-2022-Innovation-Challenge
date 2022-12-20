@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_141414"
+        tools:context=".ui.CreateServerActivity">
+
+        <com.hyphenate.easeui.widget.EaseTitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ease_common_title_bar_height"
+            android:layout_marginTop="@dimen/circle_statusbar_height"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleBarDisplayHomeAsUpEnabled="false"
+            app:titleBarLeftImage="@drawable/back_arrow_white"
+            app:titleBarRightTitle="@string/home_create"
+            app:titleBarRightVisible="true"
+            app:titleBarTitle="@string/home_create_server"
+            app:titleBarTitlePosition="left"
+            app:titleBarTitleTextColor="@color/white"
+            app:titleBarTitleTextSize="16sp" />
+
+        <com.hyphenate.easeui.widget.EaseImageView
+            android:id="@+id/iv_add_bg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_gray_474747"
+            app:ease_shape_type="round"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_add_white"
+            app:layout_constraintBottom_toTopOf="@id/tv_server_icon"
+            app:layout_constraintLeft_toLeftOf="@id/tv_server_icon"
+            app:layout_constraintRight_toRightOf="@id/tv_server_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_add_bg"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_server_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_server_icon"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_add_bg"
+            app:layout_constraintLeft_toLeftOf="@id/iv_add_bg"
+            app:layout_constraintRight_toRightOf="@id/iv_add_bg"
+            app:layout_constraintTop_toBottomOf="@id/iv_add" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/home_server_name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_add_bg" />
+
+        <TextView
+            android:id="@+id/tv_name_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/16"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_server_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext_bg"
+            android:hint="@string/home_server_name_hint"
+            android:maxLength="16"
+            android:minHeight="40dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_gray_a7a9ac"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="@id/tv_name_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLength="120"
+            android:text="@string/home_server_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_server_name" />
+
+        <TextView
+            android:id="@+id/tv_desc_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/120"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_desc"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_server_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext_bg"
+            android:gravity="top"
+            android:hint="@string/home_server_desc_hint"
+            android:minHeight="120dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_gray_a7a9ac"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_desc"
+            app:layout_constraintRight_toRightOf="@id/tv_desc_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

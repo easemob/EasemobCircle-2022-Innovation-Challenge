@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dialog_recall" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:textColor">@color/gray_979797</item>
+        <item name="android:textSize">10sp</item>
+        <!--<item name="android:background">@drawable/ease_timestampe_bg</item>-->
+    </style>
+
+    <style name="ease_row_receive_iv_userhead_style">
+        <item name="android:layout_width">@dimen/size_avatar</item>
+        <item name="android:layout_height">@dimen/size_avatar</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginLeft">@dimen/ease_chat_avatar_margin</item>
+        <item name="android:src">@drawable/circle_default_avatar</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">@color/circle_green_27ae60</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="ease_msg_text_file_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="bubble_inner_start_top_end_margin">
+        <item name="android:layout_marginStart">@dimen/ease_chat_bubble_margin_12</item>
+        <item name="android:layout_marginEnd">@dimen/ease_chat_bubble_margin_12</item>
+        <item name="android:layout_marginTop">@dimen/ease_chat_bubble_margin_12</item>
+    </style>
+
+</resources>
