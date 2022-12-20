@@ -1,0 +1,67 @@
+PODS:
+  - Alamofire (5.6.4)
+  - BadgeHub (1.0.0)
+  - BadgeSwift (8.0.0)
+  - EmptyDataSet-Swift (5.0.0)
+  - HyphenateChat_Circle (3.9.5.2)
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
+  - LeanCloud/Foundation (17.10.1):
+    - Alamofire (~> 5.4)
+  - LTMorphingLabel (0.9.3)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
+  - SPAlert (4.2.0)
+  - SPIndicator (1.6.4)
+  - SwiftEntryKit (2.0.0)
+  - TagListView (1.4.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - BadgeHub
+  - BadgeSwift
+  - EmptyDataSet-Swift
+  - HyphenateChat_Circle
+  - LeanCloud/Foundation
+  - LTMorphingLabel
+  - MessageKit
+  - SPAlert
+  - SPIndicator
+  - SwiftEntryKit
+  - TagListView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BadgeHub
+    - BadgeSwift
+    - EmptyDataSet-Swift
+    - HyphenateChat_Circle
+    - InputBarAccessoryView
+    - LeanCloud
+    - LTMorphingLabel
+    - MessageKit
+    - SPAlert
+    - SPIndicator
+    - SwiftEntryKit
+    - TagListView
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  BadgeHub: b227771329f78c37a2dae7502607ec6d00a50bd4
+  BadgeSwift: a81547ffde1f462bb5fc02e3fa3fdcbc1b888354
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  HyphenateChat_Circle: 1cba8be6e38146043f0c6aedd6e8f2cee3b058e5
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
+  LeanCloud: e6de4b8129ab68be7f70a9b77c4304f71c5a1a2c
+  LTMorphingLabel: f2b256e4fe665aac27f0d0e8ccdcd79590f0cd70
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
+  SPAlert: 735da1f16a887e294719217572ce1f936d8c8782
+  SPIndicator: 93e0a4fb23de51294ac48e874c0f081a5e293e4f
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+
+PODFILE CHECKSUM: 199ba64e466b7763ffa71a19422d3e8e73922ede
+
+COCOAPODS: 1.11.3
