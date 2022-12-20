@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="MessageCommonView" customModule="discord_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-KD-cFq">
+                    <rect key="frame" x="16" y="8" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="3aH-6B-uWn"/>
+                        <constraint firstAttribute="height" constant="36" id="HgJ-bY-ovR"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngo-Ue-8EU">
+                    <rect key="frame" x="16" y="8" width="36" height="36"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="clickHeadAction" destination="iN0-l3-epB" eventType="touchUpInside" id="Kb6-dC-wsg"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-ev-ay3">
+                    <rect key="frame" x="66" y="8" width="36.5" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="3pc-In-2mS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" name="#27AE60"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-eQ-i1G">
+                    <rect key="frame" x="106.5" y="10" width="25.5" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="tUd-Rh-ELZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="10"/>
+                    <color key="textColor" name="#929497"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yud-Ei-Eix">
+                    <rect key="frame" x="66" y="29" width="332" height="146"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="MeA-eQ-i1G" firstAttribute="leading" secondItem="mJd-ev-ay3" secondAttribute="trailing" constant="4" id="4EW-Jw-pzP"/>
+                <constraint firstItem="enQ-KD-cFq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="6Ng-qr-tle"/>
+                <constraint firstItem="Ngo-Ue-8EU" firstAttribute="leading" secondItem="enQ-KD-cFq" secondAttribute="leading" id="D1x-wD-4kg"/>
+                <constraint firstAttribute="trailing" secondItem="yud-Ei-Eix" secondAttribute="trailing" constant="16" id="Hra-rH-GDX"/>
+                <constraint firstItem="yud-Ei-Eix" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="IQB-AX-WOh"/>
+                <constraint firstItem="enQ-KD-cFq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="OYw-L8-sjc"/>
+                <constraint firstAttribute="bottom" secondItem="yud-Ei-Eix" secondAttribute="bottom" constant="8" id="TAj-4l-rMS"/>
+                <constraint firstItem="MeA-eQ-i1G" firstAttribute="bottom" secondItem="mJd-ev-ay3" secondAttribute="bottom" id="UXd-Rv-Q3R"/>
+                <constraint firstItem="mJd-ev-ay3" firstAttribute="leading" secondItem="enQ-KD-cFq" secondAttribute="trailing" constant="14" id="Ugi-WX-W6B"/>
+                <constraint firstItem="Ngo-Ue-8EU" firstAttribute="width" secondItem="enQ-KD-cFq" secondAttribute="width" id="Wgz-2A-zgQ"/>
+                <constraint firstItem="Ngo-Ue-8EU" firstAttribute="height" secondItem="enQ-KD-cFq" secondAttribute="height" id="Xw9-Ln-95s"/>
+                <constraint firstItem="mJd-ev-ay3" firstAttribute="top" secondItem="enQ-KD-cFq" secondAttribute="top" id="eYX-Mr-3Dm"/>
+                <constraint firstItem="Ngo-Ue-8EU" firstAttribute="top" secondItem="enQ-KD-cFq" secondAttribute="top" id="qVj-Dw-ewp"/>
+                <constraint firstItem="yud-Ei-Eix" firstAttribute="leading" secondItem="mJd-ev-ay3" secondAttribute="leading" id="rx9-Mw-TZR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="yud-Ei-Eix" id="COd-Wc-R7o"/>
+                <outlet property="iconImageView" destination="enQ-KD-cFq" id="3tP-8h-37s"/>
+                <outlet property="nameLabel" destination="mJd-ev-ay3" id="eFW-A8-NfX"/>
+                <outlet property="timeLabel" destination="MeA-eQ-i1G" id="YPU-ku-dX4"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-106.80803571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="#27AE60">
+            <color red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#929497">
+            <color red="0.5725490196078431" green="0.58039215686274515" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

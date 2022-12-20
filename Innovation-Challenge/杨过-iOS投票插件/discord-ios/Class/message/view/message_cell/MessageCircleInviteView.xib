@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageCircleInviteView" customModule="discord_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="roG-QF-rmx">
+                    <rect key="frame" x="8" y="8" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="2Pz-gy-4k9"/>
+                        <constraint firstAttribute="height" constant="48" id="JDw-x1-0pH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请您加入社区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-Gy-GVB">
+                    <rect key="frame" x="68" y="8" width="100" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="kgg-eR-8P0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEJ-uE-OWY">
+                    <rect key="frame" x="68" y="32" width="0.0" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="VZO-Y7-V3U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78S-NH-vuT">
+                    <rect key="frame" x="68" y="56" width="0.0" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="mdL-GN-rhw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="#282828"/>
+            <constraints>
+                <constraint firstItem="78S-NH-vuT" firstAttribute="top" secondItem="QEJ-uE-OWY" secondAttribute="bottom" constant="4" id="8AD-U2-DET"/>
+                <constraint firstItem="roG-QF-rmx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="A1Q-Ko-RcZ"/>
+                <constraint firstItem="UQ0-Gy-GVB" firstAttribute="top" secondItem="roG-QF-rmx" secondAttribute="top" id="BRm-2Z-he8"/>
+                <constraint firstItem="roG-QF-rmx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="GgO-Mu-toB"/>
+                <constraint firstItem="UQ0-Gy-GVB" firstAttribute="leading" secondItem="roG-QF-rmx" secondAttribute="trailing" constant="12" id="NRV-fA-sTu"/>
+                <constraint firstItem="78S-NH-vuT" firstAttribute="leading" secondItem="QEJ-uE-OWY" secondAttribute="leading" id="NY1-kC-hNY"/>
+                <constraint firstItem="QEJ-uE-OWY" firstAttribute="leading" secondItem="UQ0-Gy-GVB" secondAttribute="leading" id="jv4-YB-2JO"/>
+                <constraint firstItem="QEJ-uE-OWY" firstAttribute="top" secondItem="UQ0-Gy-GVB" secondAttribute="bottom" id="tdv-MY-gzg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="channelNameLabel" destination="78S-NH-vuT" id="2tQ-Nt-DH8"/>
+                <outlet property="iconImageView" destination="roG-QF-rmx" id="fHx-wh-fXG"/>
+                <outlet property="serverNameLabel" destination="QEJ-uE-OWY" id="oxd-49-wjc"/>
+            </connections>
+            <point key="canvasLocation" x="142.75362318840581" y="54.910714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="#282828">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
