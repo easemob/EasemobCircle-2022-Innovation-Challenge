@@ -1,0 +1,34 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+target 'XuefoQiFu' do
+
+pod 'Google-Mobile-Ads-SDK'
+pod 'AFNetworking'
+pod 'JPush'
+pod 'BmobSDK'
+pod 'Colours'
+pod 'FlatUIKit'
+pod 'LKDBHelper'
+pod 'MMDrawerController'
+pod 'KGModal'
+pod 'Masonry'
+pod 'MJRefresh'
+pod 'ReactiveCocoa', '~> 2.5.0'
+pod 'SoundManager'
+pod 'SVProgressHUD'
+pod 'UITextView+Placeholder'
+
+
+pod 'MBProgressHUD'
+pod 'Masonry'
+
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'FMDB'
+pod 'HyphenateChat'
+pod 'EaseIMKit'
+pod 'EaseCallKit'
+pod 'AgoraRtcEngine_iOS'
+pod 'Bugly'
+end
