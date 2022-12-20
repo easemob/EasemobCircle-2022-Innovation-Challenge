@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageServerThreadListFooter" customModule="discord_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载更多子区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-Ay-5lM">
+                    <rect key="frame" x="49" y="9" width="74" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" name="#757575"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_fold" translatesAutoresizingMaskIntoConstraints="NO" id="6jr-0C-9dL">
+                    <rect key="frame" x="125" y="8" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="aWq-QE-9vn"/>
+                        <constraint firstAttribute="height" constant="16" id="uGC-Vo-9UI"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJt-0b-gIA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="clickAction" destination="iN0-l3-epB" eventType="touchUpInside" id="kRS-fO-8Ue"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="zJt-0b-gIA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IAd-nw-h0v"/>
+                <constraint firstAttribute="bottom" secondItem="zJt-0b-gIA" secondAttribute="bottom" id="LQF-kj-Prg"/>
+                <constraint firstItem="zJt-0b-gIA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SSl-4c-tB3"/>
+                <constraint firstItem="6jr-0C-9dL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="i2m-vu-scV"/>
+                <constraint firstItem="6jr-0C-9dL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="125" id="lAv-co-beV"/>
+                <constraint firstAttribute="trailing" secondItem="zJt-0b-gIA" secondAttribute="trailing" id="she-6O-Nyo"/>
+                <constraint firstItem="mPE-Ay-5lM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xiz-zc-THu"/>
+                <constraint firstItem="mPE-Ay-5lM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="49" id="ybH-cd-bjn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="149" y="117"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_fold" width="14" height="14"/>
+        <namedColor name="#757575">
+            <color red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

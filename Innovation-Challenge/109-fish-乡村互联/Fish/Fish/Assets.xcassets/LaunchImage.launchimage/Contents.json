@@ -1,0 +1,162 @@
+{
+  "images" : [
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch2688@2x.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "12.0",
+      "orientation" : "portrait",
+      "scale" : "3x",
+      "subtype" : "2688h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch1792@2x.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "12.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "1792h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad2388@2x.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "12.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "2388h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad2388x1688@2x.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "12.0",
+      "orientation" : "landscape",
+      "scale" : "2x",
+      "subtype" : "2388h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "11.0",
+      "orientation" : "portrait",
+      "scale" : "3x",
+      "subtype" : "2436h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad@2x的副本.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "10.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "2224h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad@2x的副本2.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "10.0",
+      "orientation" : "landscape",
+      "scale" : "2x",
+      "subtype" : "2224h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad@2x的副本 1.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "9.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "1366h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad@2x的副本2 1.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "9.0",
+      "orientation" : "landscape",
+      "scale" : "2x",
+      "subtype" : "1366h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "3x",
+      "subtype" : "736h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x的副本.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "667h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x的副本2.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x的副本3.png",
+      "idiom" : "iphone",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "retina4"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad@2x的副本3.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "scale" : "1x"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "LaunchIpad@2x.png",
+      "idiom" : "ipad",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x的副本4 2.png",
+      "idiom" : "iphone",
+      "orientation" : "portrait",
+      "scale" : "1x"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x的副本4 1.png",
+      "idiom" : "iphone",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "Launch8p@2x的副本4.png",
+      "idiom" : "iphone",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "retina4"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
