@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThreadCreateViewController" customModule="discord_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="chatInputView" destination="Owd-Da-J7R" id="JZ2-EI-v6y"/>
+                <outlet property="clearButton" destination="FWY-xb-daa" id="I31-PN-3dt"/>
+                <outlet property="countLabel" destination="ZOf-oY-EwF" id="W8v-55-R8w"/>
+                <outlet property="messageView" destination="O8W-aX-V1v" id="RF3-d2-GxT"/>
+                <outlet property="sendMessageLabel" destination="GXh-zc-pSI" id="rXe-bS-Izy"/>
+                <outlet property="textField" destination="rLP-Wh-FUn" id="AYa-QA-3J5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子区名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8c-n6-TQ1">
+                    <rect key="frame" x="16" y="56" width="48" height="22.5"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-oY-EwF">
+                    <rect key="frame" x="368.5" y="57.5" width="29.5" height="20"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" name="#929497"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 必填项" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-Wh-FUn">
+                    <rect key="frame" x="16" y="78.5" width="382" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ieH-il-4Xg"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6PN-Cb-V0h"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14F-e9-UNi">
+                    <rect key="frame" x="16" y="118.5" width="382" height="1"/>
+                    <color key="backgroundColor" name="#474747"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="aDS-Kf-9yE"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送一条消息创建子区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXh-zc-pSI">
+                    <rect key="frame" x="16" y="127.5" width="382" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="#4D4D4D"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWY-xb-daa">
+                    <rect key="frame" x="378" y="87.5" width="20" height="22"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="search_clean"/>
+                    <connections>
+                        <action selector="clearAction" destination="-1" eventType="touchUpInside" id="frY-zI-fmr"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8W-aX-V1v">
+                    <rect key="frame" x="0.0" y="160.5" width="398" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="r04-TX-4Dq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以上为原始消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zT-7P-fdI">
+                    <rect key="frame" x="66" y="260.5" width="86" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" name="#929497"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owd-Da-J7R" customClass="ChatInputView" customModule="discord_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="816" width="414" height="46"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="100" constant="46" id="XXh-0M-5qN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="#181818"/>
+            <constraints>
+                <constraint firstItem="Owd-Da-J7R" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="2IK-HJ-0mL"/>
+                <constraint firstItem="GXh-zc-pSI" firstAttribute="trailing" secondItem="14F-e9-UNi" secondAttribute="trailing" id="2gb-zF-CYh"/>
+                <constraint firstItem="14F-e9-UNi" firstAttribute="trailing" secondItem="ZOf-oY-EwF" secondAttribute="trailing" id="56z-pq-RjT"/>
+                <constraint firstItem="GXh-zc-pSI" firstAttribute="leading" secondItem="14F-e9-UNi" secondAttribute="leading" id="5nJ-W2-RsK"/>
+                <constraint firstItem="k8c-n6-TQ1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6XR-af-fLU"/>
+                <constraint firstItem="14F-e9-UNi" firstAttribute="top" secondItem="rLP-Wh-FUn" secondAttribute="bottom" id="95O-8s-LZY"/>
+                <constraint firstItem="Owd-Da-J7R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9t7-um-t6Y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZOf-oY-EwF" secondAttribute="trailing" constant="16" id="DU8-y7-7Fa"/>
+                <constraint firstItem="14F-e9-UNi" firstAttribute="leading" secondItem="rLP-Wh-FUn" secondAttribute="leading" id="JAb-65-9WO"/>
+                <constraint firstItem="FWY-xb-daa" firstAttribute="centerY" secondItem="rLP-Wh-FUn" secondAttribute="centerY" id="P4v-bY-GHX"/>
+                <constraint firstItem="rLP-Wh-FUn" firstAttribute="top" secondItem="k8c-n6-TQ1" secondAttribute="bottom" id="S9m-qL-X8S"/>
+                <constraint firstItem="0zT-7P-fdI" firstAttribute="leading" secondItem="O8W-aX-V1v" secondAttribute="leading" constant="66" id="SfK-aG-YIr"/>
+                <constraint firstItem="O8W-aX-V1v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wy4-41-Ke1"/>
+                <constraint firstItem="k8c-n6-TQ1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="dV9-bS-dx9"/>
+                <constraint firstItem="O8W-aX-V1v" firstAttribute="top" secondItem="GXh-zc-pSI" secondAttribute="bottom" constant="16" id="dff-2V-mhD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Owd-Da-J7R" secondAttribute="trailing" id="hEx-X0-mgN"/>
+                <constraint firstItem="GXh-zc-pSI" firstAttribute="top" secondItem="14F-e9-UNi" secondAttribute="bottom" constant="8" id="jVN-7C-4wR"/>
+                <constraint firstItem="rLP-Wh-FUn" firstAttribute="trailing" secondItem="ZOf-oY-EwF" secondAttribute="trailing" id="kqp-TU-ntj"/>
+                <constraint firstItem="rLP-Wh-FUn" firstAttribute="leading" secondItem="k8c-n6-TQ1" secondAttribute="leading" id="mXQ-Qw-s2w"/>
+                <constraint firstItem="FWY-xb-daa" firstAttribute="trailing" secondItem="ZOf-oY-EwF" secondAttribute="trailing" id="nxT-3W-u4m"/>
+                <constraint firstItem="ZOf-oY-EwF" firstAttribute="centerY" secondItem="k8c-n6-TQ1" secondAttribute="centerY" id="rkY-eB-avx"/>
+                <constraint firstItem="0zT-7P-fdI" firstAttribute="top" secondItem="O8W-aX-V1v" secondAttribute="bottom" id="sOs-U1-QiA"/>
+                <constraint firstItem="O8W-aX-V1v" firstAttribute="trailing" secondItem="GXh-zc-pSI" secondAttribute="trailing" id="vjk-e6-ee6"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="132"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search_clean" width="20" height="20"/>
+        <namedColor name="#181818">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#474747">
+            <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#4D4D4D">
+            <color red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#929497">
+            <color red="0.5725490196078431" green="0.58039215686274515" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
