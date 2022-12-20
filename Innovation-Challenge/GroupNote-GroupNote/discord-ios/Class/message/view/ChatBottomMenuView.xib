@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatBottomMenuView" customModule="discord_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6T1-Af-r3w">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="GI7-o1-Mkr" appends="YES" id="hke-Tm-aYY"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVl-VG-v8o">
+                    <rect key="frame" x="0.0" y="688" width="414" height="208"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bO0-Di-8ET">
+                            <rect key="frame" x="0.0" y="11" width="414" height="68"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="68" id="MF8-aM-o3z"/>
+                            </constraints>
+                            <collectionViewLayout key="collectionViewLayout" id="Ajj-q3-xmG" customClass="ChatBottomMenuLayout" customModule="discord_ios" customModuleProvider="target"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="Rnu-Vh-gz5"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="Qj6-aQ-jra"/>
+                            </connections>
+                        </collectionView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hSI-mK-Z3V">
+                            <rect key="frame" x="0.0" y="90" width="414" height="84"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="84" id="Ust-99-2u0"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="axi-Sp-JnJ">
+                                <size key="itemSize" width="84" height="84"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="rKu-9Y-ZqJ"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="qRV-ow-Ji9"/>
+                            </connections>
+                        </collectionView>
+                        <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="fwJ-so-g87">
+                            <rect key="frame" x="0.0" y="174" width="414" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="Qrq-Ne-obf"/>
+                            </constraints>
+                            <connections>
+                                <action selector="pageControlValueChangeAction" destination="iN0-l3-epB" eventType="valueChanged" id="ygC-8n-Svl"/>
+                            </connections>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" name="#1F1F1F"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="hSI-mK-Z3V" firstAttribute="top" secondItem="bO0-Di-8ET" secondAttribute="bottom" constant="11" id="1g6-So-JEV"/>
+                        <constraint firstItem="hSI-mK-Z3V" firstAttribute="leading" secondItem="bO0-Di-8ET" secondAttribute="leading" id="I19-Ya-D5J"/>
+                        <constraint firstItem="bO0-Di-8ET" firstAttribute="leading" secondItem="EVl-VG-v8o" secondAttribute="leading" id="PLX-qy-bIl"/>
+                        <constraint firstItem="hSI-mK-Z3V" firstAttribute="width" secondItem="bO0-Di-8ET" secondAttribute="width" id="UBC-e6-2hz"/>
+                        <constraint firstItem="fwJ-so-g87" firstAttribute="top" secondItem="hSI-mK-Z3V" secondAttribute="bottom" id="b2o-O1-RSy"/>
+                        <constraint firstAttribute="trailing" secondItem="fwJ-so-g87" secondAttribute="trailing" id="bXj-aW-vsy"/>
+                        <constraint firstItem="fwJ-so-g87" firstAttribute="leading" secondItem="EVl-VG-v8o" secondAttribute="leading" id="eEo-xa-atu"/>
+                        <constraint firstItem="bO0-Di-8ET" firstAttribute="top" secondItem="EVl-VG-v8o" secondAttribute="top" constant="11" id="iZy-1l-mX2"/>
+                        <constraint firstAttribute="trailing" secondItem="bO0-Di-8ET" secondAttribute="trailing" id="qpU-VF-hR2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6T1-Af-r3w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4PJ-CO-MwS"/>
+                <constraint firstItem="6T1-Af-r3w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6gy-K0-RvN"/>
+                <constraint firstAttribute="bottom" secondItem="6T1-Af-r3w" secondAttribute="bottom" id="OTS-Cn-yL4"/>
+                <constraint firstItem="fwJ-so-g87" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="d0n-qm-hLx"/>
+                <constraint firstAttribute="bottom" secondItem="EVl-VG-v8o" secondAttribute="bottom" id="eDV-XL-lQe"/>
+                <constraint firstItem="EVl-VG-v8o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lSe-1p-WyL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EVl-VG-v8o" secondAttribute="trailing" id="uAk-y8-r6A"/>
+                <constraint firstAttribute="trailing" secondItem="6T1-Af-r3w" secondAttribute="trailing" id="xfH-uR-X45"/>
+            </constraints>
+            <connections>
+                <outlet property="emojiCollectionView" destination="bO0-Di-8ET" id="w2L-vx-l60"/>
+                <outlet property="emojiCollectionViewHeightConstraint" destination="MF8-aM-o3z" id="ko1-NT-dxk"/>
+                <outlet property="mainView" destination="EVl-VG-v8o" id="7b2-85-U1y"/>
+                <outlet property="menuCollectionView" destination="hSI-mK-Z3V" id="1CD-Ue-Dgl"/>
+                <outlet property="menuCollectionViewHeightConstraint" destination="Ust-99-2u0" id="6c5-aJ-r7k"/>
+                <outlet property="pageControl" destination="fwJ-so-g87" id="buo-tr-UKp"/>
+                <outlet property="pageControlHeightConstraint" destination="Qrq-Ne-obf" id="gBP-rY-k6Q"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="108"/>
+        </view>
+        <tapGestureRecognizer id="GI7-o1-Mkr">
+            <connections>
+                <action selector="tabAction:" destination="iN0-l3-epB" id="g5j-M0-yEf"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <namedColor name="#1F1F1F">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

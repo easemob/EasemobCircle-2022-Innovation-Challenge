@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="discord_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="chatInputView" destination="SJH-Nz-MMW" id="Hea-9l-tJS"/>
+                <outlet property="inputViewBottomConstraint" destination="dwU-RA-7n7" id="qlo-tR-YZY"/>
+                <outlet property="tableView" destination="ytc-ab-pHZ" id="NQ3-lX-ZLH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-ab-pHZ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="772"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="te5-za-VaT"/>
+                        <outlet property="delegate" destination="-1" id="suR-7Y-s1S"/>
+                        <outletCollection property="gestureRecognizers" destination="NDc-zV-aeo" appends="YES" id="dHs-xR-Xxc"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJH-Nz-MMW" customClass="ChatInputView" customModule="discord_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="816" width="414" height="46"/>
+                    <color key="backgroundColor" name="#1F1F1F"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="100" constant="46" id="hqK-ha-gXH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="#181818"/>
+            <constraints>
+                <constraint firstItem="ytc-ab-pHZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ik7-Q4-Vve"/>
+                <constraint firstItem="ytc-ab-pHZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Tah-H9-qPQ"/>
+                <constraint firstItem="SJH-Nz-MMW" firstAttribute="top" secondItem="ytc-ab-pHZ" secondAttribute="bottom" id="UIw-xO-2Uk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ytc-ab-pHZ" secondAttribute="trailing" id="Zej-au-ydT"/>
+                <constraint firstItem="SJH-Nz-MMW" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="dwU-RA-7n7"/>
+                <constraint firstItem="SJH-Nz-MMW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rEa-vs-V2n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SJH-Nz-MMW" secondAttribute="trailing" id="wtU-Yb-BQX"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="90"/>
+        </view>
+        <tapGestureRecognizer id="NDc-zV-aeo">
+            <connections>
+                <action selector="tableViewTapAction:" destination="-1" id="hE0-4Z-KAa"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <namedColor name="#181818">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#1F1F1F">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
