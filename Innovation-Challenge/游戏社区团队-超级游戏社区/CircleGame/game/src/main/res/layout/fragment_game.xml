@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="40dp">
+
+        <com.hyphenate.easeui.widget.EaseTitleBar
+            android:id="@+id/toolbar_game"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ease_common_title_bar_height"
+            app:titleBarDisplayHomeAsUpEnabled="false"
+            app:titleBarRightVisible="true"
+            app:titleBarTitleTextColor="@color/white" />
+
+        <include
+            android:id="@+id/banner"
+            layout="@layout/item_banner" />
+
+        <com.hyphenate.easeui.widget.EaseRecyclerView
+            android:id="@+id/rv_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

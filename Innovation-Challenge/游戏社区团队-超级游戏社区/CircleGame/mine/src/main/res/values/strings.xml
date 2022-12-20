@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mine</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="circle_exit">退出登录</string>
+    <string name="mine_setting">设置</string>
+    <string name="mine_avater">头像</string>
+    <string name="circle_nick_name">昵称</string>
+    <string name="mine_nickName">昵称</string>
+    <string name="circle_logout">退出登录</string>
+    <string name="circle_logout_message">确认退出吗？下次再见哦！</string>
+    <string name="circle_logout_cancel">取消</string>
+    <string name="circle_logout_exit">退出</string>
+    <string name="circle_image_in_uploading">图片正在上传中</string>
+    <string name="dialog_add_nickname_here">此处添加昵称</string>
+</resources>

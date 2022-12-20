@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="main_bottom_view_selected">
+        <item name="android:textColor">@color/main_color_tab_selected</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="main_bottom_view_normal">
+        <item name="android:textColor">@color/main_color_tab_normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <color name="main_color_tab_normal">@color/color_second_text</color>
+    <color name="main_color_tab_selected">@color/color_main_green</color>
+
+    <style name="transparentBottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/sheetStyle</item>
+    </style>
+
+    <style name="sheetStyle" parent="android:Widget">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="behavior_peekHeight">auto</item>
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_skipCollapsed">false</item>
+    </style>
+
+    <declare-styleable name="SwitchItemView">
+        <attr name="switchItemTitle" format="string|reference"/>
+        <attr name="switchItemTitleColor" format="color|reference"/>
+        <attr name="switchItemTitleSize" format="dimension|reference"/>
+        <attr name="switchItemShowDivider" format="boolean"/>
+        <attr name="switchItemHint" format="string|reference"/>
+        <attr name="switchItemCheckEnable" format="boolean"/>
+        <attr name="switchItemClickable" format="boolean"/>
+        <attr name="switchItemShowAvatar" format="boolean"/>
+        <attr name="switchItemAvatarSrc" format="reference"/>
+        <attr name="switchItemAvatarHeight" format="dimension|reference"/>
+        <attr name="switchItemAvatarWidth" format="dimension|reference"/>
+    </declare-styleable>
+
+</resources>

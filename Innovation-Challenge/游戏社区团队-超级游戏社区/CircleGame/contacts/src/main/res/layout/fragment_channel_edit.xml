@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="io.agora.service.model.ChannelViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_141414"
+        android:paddingTop="@dimen/circle_statusbar_height">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/home_channel_name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/16"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_channel_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext_bg"
+            android:hint="@string/home_channel_name_hint"
+            android:maxLength="16"
+            android:minHeight="40dp"
+            android:onClick="@{(v)->vm.delete(v)}"
+            android:text="@={vm.channelName}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_gray_a7a9ac"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="@id/tv_name_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_delete"
+            android:visibility="@{vm.channelName.length()&gt;0?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/edt_channel_name"
+            app:layout_constraintRight_toRightOf="@id/tv_name_count"
+            app:layout_constraintTop_toTopOf="@id/edt_channel_name" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLength="120"
+            android:text="@string/home_channel_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_channel_name" />
+
+        <TextView
+            android:id="@+id/tv_desc_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/120"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_desc"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_channel_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext_bg"
+            android:gravity="top"
+            android:hint="@string/home_channel_desc_hint"
+            android:minHeight="80dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_gray_a7a9ac"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_desc"
+            app:layout_constraintRight_toRightOf="@id/tv_desc_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

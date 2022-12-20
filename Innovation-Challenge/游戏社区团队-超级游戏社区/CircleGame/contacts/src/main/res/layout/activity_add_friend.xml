@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_141414"
+        tools:context=".ui.AddFriendActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cls_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="@dimen/circle_statusbar_height"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/chat_nick_margin_left"
+                android:src="@drawable/back_arrow_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/circle_add_friend_full"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_back"
+                app:layout_constraintLeft_toRightOf="@id/iv_back"
+                app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="@dimen/app_left_margin"
+            android:background="@drawable/shape_white33fff_radius18"
+            android:hint="@string/circle_add_friend_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="35dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_white_75ffffff"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cls_titlebar" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_search"
+            app:layout_constraintLeft_toLeftOf="@id/et_search"
+            app:layout_constraintTop_toTopOf="@id/et_search" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="6dp"
+            android:onClick="onClear"
+            android:scaleType="fitXY"
+            android:src="@drawable/circle_search_delete"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@id/et_search"
+            app:layout_constraintTop_toTopOf="@id/et_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_result"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

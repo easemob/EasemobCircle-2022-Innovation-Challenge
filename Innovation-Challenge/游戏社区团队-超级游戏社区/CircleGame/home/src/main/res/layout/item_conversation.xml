@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="66dp">
+
+    <io.agora.service.widget.EasePresenceView
+        android:id="@+id/pv_conversation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:name_text_size="16sp" />
+
+    <com.hyphenate.easeui.widget.EaseImageView
+        android:id="@+id/iv_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_mute"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/pv_conversation"
+        app:layout_constraintLeft_toRightOf="@id/pv_conversation"
+        app:layout_constraintTop_toTopOf="@id/pv_conversation" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/app_right_margin"
+        android:src="@drawable/circle_arrow_right_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/unread_count_bg"
+        android:gravity="center"
+        android:minWidth="19dp"
+        android:minHeight="14dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

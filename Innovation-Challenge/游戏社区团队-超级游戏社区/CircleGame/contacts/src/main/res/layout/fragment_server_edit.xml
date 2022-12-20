@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="io.agora.service.model.ServerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_141414"
+        android:paddingTop="@dimen/circle_statusbar_height">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_server_icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_avater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_left_padding"
+                android:text="@string/home_server_conver"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.hyphenate.easeui.widget.EaseImageView
+                android:id="@+id/iv_avater"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/circle_default_avatar"
+                app:ease_shape_type="round"
+                app:layout_constraintBottom_toBottomOf="@id/tv_avater"
+                app:layout_constraintRight_toLeftOf="@id/iv_avater_arrow"
+                app:layout_constraintTop_toTopOf="@id/tv_avater" />
+
+            <ImageView
+                android:id="@+id/iv_avater_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_right_padding"
+                android:src="@drawable/circle_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_light_gray_47464b"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/home_server_name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/csl_server_icon" />
+
+        <TextView
+            android:id="@+id/tv_name_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/16"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_server_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext_bg"
+            android:gravity="left|center_vertical"
+            android:hint="@string/home_server_name_hint"
+            android:maxLength="16"
+            android:minHeight="40dp"
+            android:onClick="@{(v)->vm.delete(v)}"
+            android:text="@={vm.serverName}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_gray_a7a9ac"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="@id/tv_name_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_delete"
+            android:visibility="@{vm.serverName.length()&gt;0?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/edt_server_name"
+            app:layout_constraintRight_toRightOf="@id/tv_name_count"
+            app:layout_constraintTop_toTopOf="@id/edt_server_name" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLength="120"
+            android:text="@string/home_server_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_server_name" />
+
+        <TextView
+            android:id="@+id/tv_desc_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/120"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_desc"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_server_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext_bg"
+            android:gravity="top"
+            android:hint="@string/home_server_desc_hint"
+            android:minHeight="120dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_gray_a7a9ac"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_desc"
+            app:layout_constraintRight_toRightOf="@id/tv_desc_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <TextView
+            android:id="@+id/tv_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLength="120"
+            android:text="@string/home_server_tags"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_server_desc" />
+
+        <TextView
+            android:id="@+id/tv_tags_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="0/10"
+            android:textColor="@color/color_gray_929497"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tags"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tags"
+            app:layout_constraintTop_toBottomOf="@id/tv_tags">
+
+            <LinearLayout
+                android:id="@+id/ll_container_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp" />
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/line_tags"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/color_light_gray_47464b"
+            app:layout_constraintTop_toBottomOf="@id/ll_container_tags" />
+
+        <ImageView
+            android:id="@+id/iv_add_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/circle_add_tags"
+            app:layout_constraintRight_toRightOf="@id/tv_tags_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_tags_count" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
