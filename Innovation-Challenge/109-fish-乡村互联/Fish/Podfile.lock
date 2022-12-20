@@ -1,0 +1,48 @@
+PODS:
+  - Bugly (2.5.93)
+  - HyphenateChat_Circle (3.9.5.2)
+  - Kingfisher (6.3.1)
+  - MJRefresh (3.7.5)
+  - PKHUD (5.3.0)
+  - SnapKit (5.6.0)
+  - SwiftLint (0.50.1)
+  - TZImagePickerController (3.8.3):
+    - TZImagePickerController/Basic (= 3.8.3)
+    - TZImagePickerController/Location (= 3.8.3)
+  - TZImagePickerController/Basic (3.8.3)
+  - TZImagePickerController/Location (3.8.3)
+
+DEPENDENCIES:
+  - Bugly
+  - HyphenateChat_Circle
+  - Kingfisher
+  - MJRefresh
+  - PKHUD
+  - SnapKit
+  - SwiftLint
+  - TZImagePickerController
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Bugly
+    - HyphenateChat_Circle
+    - Kingfisher
+    - MJRefresh
+    - PKHUD
+    - SnapKit
+    - SwiftLint
+    - TZImagePickerController
+
+SPEC CHECKSUMS:
+  Bugly: b8715e6ec4004b7f7fbffab0643ba80545aee3da
+  HyphenateChat_Circle: 1cba8be6e38146043f0c6aedd6e8f2cee3b058e5
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftLint: 6b0cf1f4d619808dbc16e4fab064ce6fc79f090b
+  TZImagePickerController: e9909edbadf7381140efc5b5c9f5bdbfd630f7d4
+
+PODFILE CHECKSUM: 93e0a35fd9dfb175d39371f39d85dd525bec8ab1
+
+COCOAPODS: 1.11.3
