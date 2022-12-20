@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-![home](/imgs/demo.png)
+![home](./imgs/demo.png)
 
 ## Feature List
 
