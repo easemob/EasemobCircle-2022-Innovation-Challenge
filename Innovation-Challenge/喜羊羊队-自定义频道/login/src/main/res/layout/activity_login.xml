@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="io.agora.login.model.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141414"
+        tools:context=".ui.LoginActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/log_in_bg" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="195dp"
+            android:text="@string/login_welcome"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tv_account"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/app_left_margin"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="@dimen/app_right_margin"
+            android:height="48dp"
+            android:background="@drawable/shape_gray262626_radius40"
+            android:gravity="center|left"
+            android:hint="@string/login_account_hint"
+            android:inputType="phone"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@={vm.obAccount}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_979797"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:onClick="@{(v)->vm.delete(v)}"
+            android:src="@drawable/login_delete"
+            android:visibility="@{vm.obAccount.length()&gt;0?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/tv_account"
+            app:layout_constraintRight_toRightOf="@id/tv_account"
+            app:layout_constraintTop_toTopOf="@id/tv_account" />
+
+        <EditText
+            android:id="@+id/tv_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/app_left_margin"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="@dimen/app_right_margin"
+            android:height="48dp"
+            android:background="@drawable/shape_gray262626_radius40"
+            android:gravity="center|left"
+            android:hint="@string/login_pwd_hint"
+            android:inputType="@{vm.mode&gt;0?0x00000081:0x00000001}"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="12dp"
+            android:text="@={vm.obPwd}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_979797"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_account" />
+
+        <ImageView
+            android:id="@+id/iv_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:onClick="@{(v)->vm.showPwd(v)}"
+            android:src="@drawable/login_eye"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pwd"
+            app:layout_constraintRight_toRightOf="@id/tv_pwd"
+            app:layout_constraintTop_toTopOf="@id/tv_pwd" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_left_margin"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="@dimen/app_left_margin"
+            android:background="@drawable/selector_login_bg"
+            android:enabled="@{vm.obAccount.length()&gt;0&amp;&amp;vm.agreement}"
+            android:text="@string/login_login"
+            android:textColor="@drawable/selector_login_textcolor"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_pwd" />
+
+        <CheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="16dp"
+            android:button="@drawable/cb_agreement_select"
+            android:checked="@={vm.agreement}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxWidth="300dp"
+            android:text="@string/circle_login_agreement"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/cb_select"
+            app:layout_constraintLeft_toRightOf="@id/cb_select"
+            app:layout_constraintTop_toTopOf="@id/cb_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxWidth="300dp"
+            android:text="@string/circle_login_unregister"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_agreement"
+            app:layout_constraintTop_toBottomOf="@id/tv_agreement" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

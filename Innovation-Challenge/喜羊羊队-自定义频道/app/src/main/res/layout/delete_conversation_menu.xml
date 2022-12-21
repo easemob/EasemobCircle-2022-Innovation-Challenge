@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_delete_conversation"
+    android:layout_width="104dp"
+    android:layout_height="44dp"
+    android:background="@drawable/shape_white_radius4"
+    android:drawableLeft="@drawable/circle_delete_friend"
+    android:gravity="center"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:text="@string/circle_delete_conversation"
+    android:textColor="@color/black"
+    android:textSize="14sp">
+
+
+</TextView>

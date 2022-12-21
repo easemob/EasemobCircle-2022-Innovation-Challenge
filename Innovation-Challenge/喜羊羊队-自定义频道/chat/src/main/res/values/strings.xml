@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">chat</string>
+    <string name="attach_picture">照片</string>
+    <string name="attach_take_pic">相机</string>
+    <string name="attach_file">文件</string>
+
+    <string name="action_copy">复制</string>
+    <string name="action_forward">转发</string>
+    <string name="action_recall">撤回</string>
+    <string name="action_delete">删除</string>
+    <string name="action_multi_select">多选</string>
+    <string name="delete_voice">删除语音</string>
+    <string name="delete_video">删除视频</string>
+    <string name="ease_thread_create_title">创建子区</string>
+    <string name="chat_thread_name">子区名</string>
+    <string name="home_thread_name_hint">必填项</string>
+    <string name="ease_thread_create_mentions">发送一条消息创建消息子区</string>
+
+    <string name="ease_chat_were_mentioned">[@Mentioning me]</string>
+    <string name="ease_thread_create_parent_msg_from_parent">以上为原始消息</string>
+    <string name="circle_join_the_thread">加入子区</string>
+
+    <string name="ease_thread_create_input_hint">子区名</string>
+    <string name="ease_thread_started_by_user">创建者: %1$s</string>
+    <string name="ease_thread_list_admin_title">所有子区</string>
+    <string name="ease_thread_list_member_title">已加入的子区</string>
+    <string name="ease_thread_list_sub_title"># %1$s</string>
+
+    <string name="ease_start_a_thread">Started a Thread:</string>
+
+    <string name="ease_thread_region_no_message">没有消息.</string>
+    <string name="ease_no_parent_message">加载原始消息失败</string>
+    <string name="thread_unsent_message_success">你成功撤回一条消息</string>
+
+    <string name="chat_thread_message_send_success">发送成功</string>
+    <string name="circle_invite_to_server">邀请您加入社区</string>
+    <string name="circle_have_joined_server">您已经加入社区</string>
+    <string name="circle_have_joined_channel">您已经加入频道</string>
+
+
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ground</string>
+    <string name="ground_serch">搜索</string>
+    <string name="keyword_not_empty">关键字不能为空</string>
+    <string name="circle_ground_search">搜索社区</string>
+    <string name="ground_serch_hint">搜索社区</string>
+</resources>

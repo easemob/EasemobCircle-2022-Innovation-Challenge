@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="login_welcome" >登录环信超级社区</string>
+    <string name="login_account_hint">请输入您的手机号</string>
+    <string name="login_pwd_hint">请输入密码</string>
+    <string name="login_login">登录</string>
+    <string name="circle_login_agreement">同意《环信服务条款》与《环信隐私协议》，</string>
+    <string name="circle_login_unregister">未注册手机号登陆成功后将自动注册。</string>
+    <string name="circle_phone_illegal">请输入正确的手机号</string>
+    <string name="circle_in_login">登录中</string>
+
+</resources>

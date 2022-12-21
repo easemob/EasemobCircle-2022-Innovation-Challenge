@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_main_green">#27ae60</color>
+    <color name="color_main_text">#27ae60</color>
+    <color name="color_second_text">#6e6e6e</color>
+    <color name="color_selected_text">@color/color_main_green</color>
+    <color name="color_action_text">#27ae60</color>
+    <color name="color_title_text">#000000</color>
+    <color name="color_alert">#FF14CC</color>
+    <color name="color_search_bg">#F2F2F2</color>
+    <color name="color_text_hint">#ffcccccc</color>
+    <color name="color_window_bg">@color/white</color>
+    <color name="color_divider">#fff2f2f2</color>
+    <color name="color_text_cursor">#27ae60</color>
+    <color name="color_light_gray_999999">#999999</color>
+    <color name="color_light_gray_666666">#666666</color>
+    <color name="color_light_gray_88111111">#88111111</color>
+    <color name="color_light_gray_cccccc">#cccccc</color>
+    <color name="color_black_333333">#333333</color>
+
+
+    <color name="gray_262626">#262626</color>
+    <color name="gray_979797">#979797</color>
+    <color name="deep_green_124a30">#124a30</color>
+    <color name="black_141414">#141414</color>
+    <color name="color_red_ff1477">#ff1477</color>
+    <color name="green_14ff72">#14ff72</color>
+    <color name="color_white_33ffffff">#33ffffff</color>
+    <color name="color_white_75ffffff">#75ffffff</color>
+    <color name="black_1f1f1f">#1f1f1f</color>
+    <color name="color_light_gray_47464b">#47464b</color>
+
+    <color name="color_gray_474747">#474747</color>
+    <color name="color_gray_929497">#929497</color>
+    <color name="color_gray_a7a9ac">#a7a9ac</color>
+    <color name="color_blue_27ae60">#27ae60</color>
+    <color name="color_gray_e6e6e6">#e6e6e6</color>
+    <color name="circle_blue_037bfd">#037bfd</color>
+    <color name="color_gray_c4c4c4">#c4c4c4</color>
+    <color name="color_light_gray_bdbdbd">#bdbdbd</color>
+    <color name="circle_gray_808080">#808080</color>
+    <color name="color_gray_3e3f40">#3e3f40</color>
+
+    <color name="green_bg">#27AE60</color>
+    <color name="color_black_404a4e">#404a4e</color>
+    <color name="color_purple_6c6ff8">#6c6ff8</color>
+    <color name="circle_black_60">#60000000</color>
+
+</resources>
