@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/main_tab_home_selector"
+        android:title="@string/main_title_home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/courseFragment"
+        android:icon="@drawable/main_tab_ground_selector"
+        android:title="@string/main_title_ground"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/gameFragment"
+        android:icon="@drawable/main_tab_game_selector"
+        android:title="@string/main_title_game"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/studyFragment"
+        android:icon="@drawable/main_tab_contacts_selector"
+        android:title="@string/main_title_contacts"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mineFragment"
+        android:icon="@drawable/main_tab_mine_selector"
+        android:title="@string/main_title_mine"
+        app:showAsAction="ifRoom" />
+</menu>

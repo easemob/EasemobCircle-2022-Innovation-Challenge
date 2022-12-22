@@ -1,0 +1,22 @@
+if (singleModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply from: '../dependencies.gradle'
+
+android {
+
+    defaultConfig {
+        if (singleModule.toBoolean()){
+            applicationId "io.agora.mine"
+        }
+    }
+}
+
+dependencies {
+    api project(path:':service')
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+}

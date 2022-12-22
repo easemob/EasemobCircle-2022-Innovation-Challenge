@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="send_message">发送消息</string>
+    <string name="reaction_to_max">消息回应已达到上限</string>
+    <string name="ease_thread_region_no_message">没有消息</string>
+    <string name="ease_copied_to_the_clipboard">已复制到剪切板</string>
+</resources>

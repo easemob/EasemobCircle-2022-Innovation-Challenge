@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ServerDetailFragment">
+
+        <io.agora.service.widget.RadiuImageView
+            android:id="@+id/iv_server"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:radius="12dp"
+            tools:src="@drawable/cover03" />
+
+        <io.agora.service.widget.RadiuImageView
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            app:left_top_radius="12dp"
+            app:right_top_radius="12dp"
+            android:background="@drawable/shape_gray_gradient_vertical_reverse"
+            app:layout_constraintLeft_toLeftOf="@id/iv_server"
+            app:layout_constraintRight_toRightOf="@id/iv_server"
+            app:layout_constraintTop_toTopOf="@id/iv_server" />
+
+        <TextView
+            android:id="@+id/tv_server_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/iv_server"
+            app:layout_constraintRight_toLeftOf="@id/iv_invite"
+            app:layout_constraintTop_toTopOf="@id/iv_server"
+            tools:text="张三的歌" />
+
+        <Button
+            android:id="@+id/btn_join_in"
+            android:layout_width="64dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_gray_27ae60_radius48"
+            android:gravity="center"
+            android:text="@string/circle_in"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@id/iv_server"
+            app:layout_constraintTop_toTopOf="@id/iv_server" />
+
+        <ImageView
+            android:id="@+id/iv_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/circle_invite"
+            app:layout_constraintBottom_toBottomOf="@id/tv_server_name"
+            app:layout_constraintRight_toLeftOf="@id/iv_more"
+            app:layout_constraintTop_toTopOf="@id/tv_server_name" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/circle_more_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/tv_server_name"
+            app:layout_constraintRight_toRightOf="@id/iv_server"
+            app:layout_constraintTop_toTopOf="@id/tv_server_name" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_tags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_server"
+            app:layout_constraintLeft_toLeftOf="@id/tv_server_name"
+            app:layout_constraintRight_toRightOf="@id/iv_server">
+
+            <LinearLayout
+                android:id="@+id/ll_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/iv_server"
+            app:layout_constraintRight_toRightOf="@id/iv_server"
+            app:layout_constraintTop_toBottomOf="@id/iv_server"
+            tools:text="我要带你到处去飞翔走遍世界各地去观赏没有烦恼没有那悲伤自由自在身心多开朗忘掉痛苦忘..." />
+
+        <LinearLayout
+            android:id="@+id/ll_channel_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/iv_server"
+            app:layout_constraintRight_toRightOf="@id/iv_server"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc">
+
+            <ImageView
+                android:id="@+id/iv_channnel_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_arrow_up" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/home_text_channel"
+                android:textColor="@color/color_white_75ffffff"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_add_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_add_channel" />
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_channel_type">
+
+            <com.hyphenate.easeui.widget.EaseRecyclerView
+                android:id="@+id/rv_channel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

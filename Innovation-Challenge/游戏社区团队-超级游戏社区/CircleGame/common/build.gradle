@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+//此模块存放与业务无关的基础库 比如 BaseActivity 、BaseFragment、BaseViewModel
+// CrashHandler、日志上报、推送、联网请求基类、封装的基础自定义UI控件、工具类、webview等
+
+android {
+
+}
+
+dependencies {
+    //gson
+    api("com.google.code.gson:gson:2.8.6")
+    //glide
+    api 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    //utils
+    api 'com.blankj:utilcodex:1.31.0'
+
+    //腾讯的key-value
+    implementation("com.tencent:mmkv-static:1.2.1")
+    //webview
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v5.0.0-alpha.1-androidx' // (必选)
+    implementation 'com.github.Justson.AgentWeb:agentweb-filechooser:v5.0.0-alpha.1-androidx' // (可选)
+    implementation 'com.github.Justson:Downloader:v5.0.0-androidx' // (可选)
+
+    api 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
+    api 'com.tencent.bugly:crashreport:4.0.4'
+
+}

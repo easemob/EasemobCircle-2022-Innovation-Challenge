@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+//此模块存放一些公共业务相关的 比如数据库、用户信息管理类等
+
+android {
+    // Read local.properties
+    Properties properties = new Properties()
+    InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream() ;
+    properties.load( inputStream )
+
+    defaultConfig{
+        ndk {
+            abiFilters  "arm64-v8a","armeabi-v7a","x86","x86_64"
+        }
+        //用于设置使用as打包so时指定输出目录
+        externalNativeBuild {
+            ndkBuild {
+                abiFilters  "arm64-v8a","armeabi-v7a","x86","x86_64"
+            }
+        }
+//        buildConfigField ("String", "CIRCLE_BUGLY_APPID", properties.getProperty("circle_bugly_appid", "e9527ae96f"))
+        manifestPlaceholders = [EASEMOB_APPKEY: properties.getProperty("circle_appkey", "1135171222115001#gamecircle")]
+    }
+    //打开注释后，可以直接在studio里查看和编辑emclient-linux里的代码
+//    externalNativeBuild {
+//        ndkBuild {
+//            path file('jni/Android.mk')
+//        }
+//    }
+    ndkPath '/Users/xuchengpu/Library/Android/sdk/ndk/19.2.5345600'  // Point to your own NDK
+    ndkVersion '19.2.5345600'
+}
+
+dependencies {
+    api project(path: ':common')
+    // EaseIMKit
+    api project(path: ':circle-im-kit')
+
+    //temp for compile
+//    api project(path: ':hyphenatechatsdk')
+
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="circle_name">超级游戏社区</string>
+    <string name="main_title_home">Home</string>
+    <string name="main_title_ground">Ground</string>
+    <string name="main_title_game">Game</string>
+    <string name="main_title_contacts">Contacts</string>
+    <string name="main_title_mine">Mine</string>
+    <string name="circle_delete_conversation_content">确认删除后，将清空聊天记录。</string>
+    <string name="circle_exit_hint">再次点击退出</string>
+
+</resources>
