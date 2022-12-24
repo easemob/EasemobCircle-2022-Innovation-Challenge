@@ -125,8 +125,8 @@ class ChatViewController: BaseViewController {
     
     private func setupChatInputViewHandle() {
         self.chatInputView.sendHandle = { [unowned self] _ in
-            self.chatInputView.replyCloseAction()
             self.sendAction()
+            self.chatInputView.replyCloseAction()
         }
         
         self.chatInputView.didSelectedMoreItemHandle = { [unowned self] item in
