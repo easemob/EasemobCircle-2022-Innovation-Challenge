@@ -50,7 +50,13 @@ class MessageTextCell: MessageBaseCell {
                 let ID = body.customExt["ID"] ?? ""
                 let NAME = body.customExt["NAME"] ?? ""
                 self.contentTextLabel.textColor = .systemYellow
-                self.contentTextLabel.text = "向" + NAME + "投掷了整蛊💣~"
+                self.contentTextLabel.text = "向 " + NAME + " 投掷了整蛊💣~"
+            }
+            else if body.event == "LOVE" {
+                let ID = body.customExt["ID"] ?? ""
+                let NAME = body.customExt["NAME"] ?? ""
+                self.contentTextLabel.textColor = .systemRed
+                self.contentTextLabel.text = "向 " + NAME + " 真情告白💐~"
             }
         }
     }

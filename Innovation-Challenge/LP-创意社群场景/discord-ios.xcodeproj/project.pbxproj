@@ -14,6 +14,7 @@
 		0447065F2958446B00BBAB2E /* CYBaseVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0447065A2958446B00BBAB2E /* CYBaseVideoView.m */; };
 		04470668295862E900BBAB2E /* PrankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04470667295862E900BBAB2E /* PrankManager.swift */; };
 		044706802958725B00BBAB2E /* love.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0447067F2958725B00BBAB2E /* love.mp4 */; };
+		0447068229587DA800BBAB2E /* prank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0447068129587DA800BBAB2E /* prank.mp4 */; };
 		5D055D3728801FE00069D580 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D3628801FE00069D580 /* NotificationNames.swift */; };
 		5D055D4B28865CB30069D580 /* ServerInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D4A28865CB30069D580 /* ServerInfoManager.swift */; };
 		5D055D51288A3BD90069D580 /* ChatInputMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D50288A3BD90069D580 /* ChatInputMoreView.swift */; };
@@ -162,6 +163,7 @@
 		04470663295847CD00BBAB2E /* discord-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "discord-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		04470667295862E900BBAB2E /* PrankManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrankManager.swift; sourceTree = "<group>"; };
 		0447067F2958725B00BBAB2E /* love.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = love.mp4; sourceTree = "<group>"; };
+		0447068129587DA800BBAB2E /* prank.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = prank.mp4; sourceTree = "<group>"; };
 		5D055D3628801FE00069D580 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		5D055D4A28865CB30069D580 /* ServerInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoManager.swift; sourceTree = "<group>"; };
 		5D055D50288A3BD90069D580 /* ChatInputMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputMoreView.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 		5D1CCCED28C09EE300E67897 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0447068129587DA800BBAB2E /* prank.mp4 */,
 				0447067F2958725B00BBAB2E /* love.mp4 */,
 				044706502957315100BBAB2E /* prank.webp */,
 				5D1CCCF228C09EFA00E67897 /* Localizable.strings */,
@@ -933,6 +936,7 @@
 				5D8B5471287538660058FF77 /* ChatBottomMenuViewItemCell.xib in Resources */,
 				5DB0072E2861D91E00EA3A66 /* UserInfoViewController.xib in Resources */,
 				5DEBCE3E28695BEF00886437 /* MeSettingViewController.xib in Resources */,
+				0447068229587DA800BBAB2E /* prank.mp4 in Resources */,
 				5D3C7F87287D1C44007E322D /* ThreadEditViewController.xib in Resources */,
 				5DCA3A91286EC7BA00311D57 /* ChatViewController.xib in Resources */,
 				5DC7A039287BCA1700B1BA3E /* ThreadCreateViewController.xib in Resources */,

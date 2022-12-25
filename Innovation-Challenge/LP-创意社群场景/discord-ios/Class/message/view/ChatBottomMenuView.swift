@@ -21,6 +21,7 @@ class ChatBottomMenuView: UIView {
         case recall
         case reply
         case prankFunc
+        case love
     }
         
     @IBOutlet weak var mainView: UIView!
@@ -42,6 +43,7 @@ class ChatBottomMenuView: UIView {
         .recall: ("message_recall", "撤回"),
         .copy: ("message_copy", "复制"),
         .prankFunc: ("message_zd", "整蛊"),
+        .love: ("message_gaobai", "告白"),
         .reply: ("message_reply", "回复"),
         .thread: ("message_thread", "子区")
     ]

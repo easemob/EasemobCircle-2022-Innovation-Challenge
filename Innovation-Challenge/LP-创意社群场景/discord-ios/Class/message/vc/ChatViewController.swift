@@ -26,7 +26,7 @@ class ChatViewController: BaseViewController {
     
     private var messageList: [EMChatMessage] = []
     
-    let showMP4GiftPlayer = CYAlphaMTCIVideoView()
+    let showLoveAnimationGiftPlayer = CYAlphaMTCIVideoView()
     
     private lazy var currentConversation: EMConversation? = {
         switch self.chatType {
@@ -660,6 +660,7 @@ extension ChatViewController: UITableViewDataSource {
             menuItems.append(.copy)
             menuItems.append(.reply)
             menuItems.append(.prankFunc)
+            menuItems.append(.love)
         }
         
         switch self.chatType {
@@ -753,6 +754,10 @@ extension ChatViewController: EMChatManagerDelegate {
                     if event == "PRANK"{
                         PrankManager.share.curPrankUid = textBody.customExt["ID"] ?? ""
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PRANK-Notify"), object: textBody.customExt["ID"], userInfo: nil)
+                        
+                        self.showPrankAnimation()
+                    } else if event == "LOVE"{
+                        self.showLoveAnimation()
                     }
                 }
             }
@@ -838,25 +843,30 @@ extension ChatViewController: ChatBottomMenuViewDelegate {
             let userId = message.from
             UserInfoManager.share.queryUserInfo(userId: userId, loadCache: false) { userInfo, _ in
                 if let name = userInfo?.showname {
-//                    let text = "向 {" + name + "} 投掷整蛊"
-//                    let messageBody = EMTextMessageBody(text: text)
-//                    self.sendMessage(body: messageBody)
-                    
                     
                     let customBody = EMCustomMessageBody(event: "PRANK", customExt: ["ID" : userId,"NAME":name])
                     self.sendMessage(body: customBody)
                     
+                    self.showPrankAnimation()
                     PrankManager.share.curPrankUid = userId
                     //主态
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PRANK-Notify"), object: userId, userInfo: nil)
-                    
-                    self.showMp4()
                 }
                 
             }
             //整蛊
             break
-        
+        case .love:
+            let userId = message.from
+            UserInfoManager.share.queryUserInfo(userId: userId, loadCache: false) { userInfo, _ in
+                if let name = userInfo?.showname {
+                    let customBody = EMCustomMessageBody(event: "LOVE", customExt: ["ID" : userId,"NAME":name])
+                    self.sendMessage(body: customBody)
+                    self.showLoveAnimation()
+                }
+                
+            }
+            break
         case .thread:
             self.didClickThreadItem(message: message)
         }
@@ -869,14 +879,24 @@ extension ChatViewController: ChatBottomMenuViewDelegate {
         return false
     }
     
-    func showMp4() {
-        showMP4GiftPlayer.isHidden = false
-        showMP4GiftPlayer.delegate = self
-        self.view.addSubview(showMP4GiftPlayer)
-        showMP4GiftPlayer.frame = self.view.bounds
-        showMP4GiftPlayer.loopCount = 1
+    func showPrankAnimation() {
+        showLoveAnimationGiftPlayer.isHidden = false
+        showLoveAnimationGiftPlayer.delegate = self
+        self.view.addSubview(showLoveAnimationGiftPlayer)
+        showLoveAnimationGiftPlayer.frame = self.view.bounds
+        showLoveAnimationGiftPlayer.loopCount = 1
+        let mp4 = Bundle.main.url(forResource: "prank", withExtension: "mp4")
+        showLoveAnimationGiftPlayer.setVideoPathURL(mp4!)
+    }
+    
+    func showLoveAnimation() {
+        showLoveAnimationGiftPlayer.isHidden = false
+        showLoveAnimationGiftPlayer.delegate = self
+        self.view.addSubview(showLoveAnimationGiftPlayer)
+        showLoveAnimationGiftPlayer.frame = self.view.bounds
+        showLoveAnimationGiftPlayer.loopCount = 1
         let mp4 = Bundle.main.url(forResource: "love", withExtension: "mp4")
-        showMP4GiftPlayer.setVideoPathURL(mp4!)
+        showLoveAnimationGiftPlayer.setVideoPathURL(mp4!)
     }
     
     private func didClickThreadItem(message: EMChatMessage) {
@@ -1079,7 +1099,7 @@ extension ChatViewController: EMCircleManagerChannelDelegate {
 
 extension ChatViewController: GLBaseVideoViewDelegate {
     func videoPlayerDidLoop(toEnd player: CYBaseVideoView) {
-        showMP4GiftPlayer.isHidden = true
-        showMP4GiftPlayer.stopCurrentPlayItem()
+        showLoveAnimationGiftPlayer.isHidden = true
+        showLoveAnimationGiftPlayer.stopCurrentPlayItem()
     }
 }
