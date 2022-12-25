@@ -749,6 +749,7 @@ extension ChatViewController: EMChatManagerDelegate {
                 if let textBody = message.body as? EMCustomMessageBody {
                     let event = textBody.event
                     if event == "PRANK"{
+                        PrankManager.share.curPrankUid = textBody.customExt["ID"] ?? ""
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PRANK-Notify"), object: textBody.customExt["ID"], userInfo: nil)
                     }
                 }
@@ -843,13 +844,12 @@ extension ChatViewController: ChatBottomMenuViewDelegate {
                     let customBody = EMCustomMessageBody(event: "PRANK", customExt: ["ID" : userId,"NAME":name])
                     self.sendMessage(body: customBody)
                     
+                    PrankManager.share.curPrankUid = userId
                     //主态
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PRANK-Notify"), object: userId, userInfo: nil)
                 }
                 
             }
-            
-           
             //整蛊
             break
         

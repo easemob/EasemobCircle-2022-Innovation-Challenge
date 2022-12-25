@@ -74,13 +74,17 @@ class MessageBaseCell: UITableViewCell {
         NotificationCenter.default.addObserver(self, selector: #selector(onPrankNotify), name: NSNotification.Name(rawValue: "PRANK-Notify"), object: nil)
         
     }
+    
     @objc func onPrankNotify(_ notify: NSNotification) {
-        let ID = notify.object as? String
+        self.onCheckPrankAction()
+    }
+    
+    @objc func onCheckPrankAction() {
+        let ID = PrankManager.share.curPrankUid//notify.object as? String
         let from = message?.from
+        self.commonView.onStopPrank()
         if ID == from {
             self.commonView.onPrank()
-        } else {
-            self.commonView.onStopPrank()
         }
     }
     
@@ -115,6 +119,7 @@ class MessageBaseCell: UITableViewCell {
                 self.commonView.timeLabel.text = nil
             }
             self.update(message)
+            self.onCheckPrankAction()
             self.layoutIfNeeded()   // 防止未布局导致reaction视图宽度为0
             if let message = message, self.showReaction {
                 self.reactionView.setMessage(message)

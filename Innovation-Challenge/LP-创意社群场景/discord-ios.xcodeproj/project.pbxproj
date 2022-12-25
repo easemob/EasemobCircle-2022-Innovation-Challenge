@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0447064E29559B0300BBAB2E /* MessageVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447064D29559B0300BBAB2E /* MessageVideoCell.swift */; };
 		044706512957315100BBAB2E /* prank.webp in Resources */ = {isa = PBXBuildFile; fileRef = 044706502957315100BBAB2E /* prank.webp */; };
+		0447065D2958446B00BBAB2E /* CYAlphaMTCIVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044706572958446B00BBAB2E /* CYAlphaMTCIVideoView.m */; };
+		0447065E2958446B00BBAB2E /* CYMTKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044706592958446B00BBAB2E /* CYMTKView.m */; };
+		0447065F2958446B00BBAB2E /* CYBaseVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0447065A2958446B00BBAB2E /* CYBaseVideoView.m */; };
+		04470665295854EB00BBAB2E /* dinner.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04470664295854EB00BBAB2E /* dinner.mp4 */; };
+		04470668295862E900BBAB2E /* PrankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04470667295862E900BBAB2E /* PrankManager.swift */; };
 		5D055D3728801FE00069D580 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D3628801FE00069D580 /* NotificationNames.swift */; };
 		5D055D4B28865CB30069D580 /* ServerInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D4A28865CB30069D580 /* ServerInfoManager.swift */; };
 		5D055D51288A3BD90069D580 /* ChatInputMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D50288A3BD90069D580 /* ChatInputMoreView.swift */; };
@@ -148,6 +153,15 @@
 /* Begin PBXFileReference section */
 		0447064D29559B0300BBAB2E /* MessageVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVideoCell.swift; sourceTree = "<group>"; };
 		044706502957315100BBAB2E /* prank.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = prank.webp; sourceTree = "<group>"; };
+		044706572958446B00BBAB2E /* CYAlphaMTCIVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlphaMTCIVideoView.m; sourceTree = "<group>"; };
+		044706582958446B00BBAB2E /* CYBaseVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBaseVideoView.h; sourceTree = "<group>"; };
+		044706592958446B00BBAB2E /* CYMTKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMTKView.m; sourceTree = "<group>"; };
+		0447065A2958446B00BBAB2E /* CYBaseVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBaseVideoView.m; sourceTree = "<group>"; };
+		0447065B2958446B00BBAB2E /* CYAlphaMTCIVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlphaMTCIVideoView.h; sourceTree = "<group>"; };
+		0447065C2958446B00BBAB2E /* CYMTKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMTKView.h; sourceTree = "<group>"; };
+		04470663295847CD00BBAB2E /* discord-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "discord-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		04470664295854EB00BBAB2E /* dinner.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinner.mp4; sourceTree = "<group>"; };
+		04470667295862E900BBAB2E /* PrankManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrankManager.swift; sourceTree = "<group>"; };
 		5D055D3628801FE00069D580 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		5D055D4A28865CB30069D580 /* ServerInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoManager.swift; sourceTree = "<group>"; };
 		5D055D50288A3BD90069D580 /* ChatInputMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputMoreView.swift; sourceTree = "<group>"; };
@@ -312,9 +326,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044706562958446B00BBAB2E /* AlphaVideo */ = {
+			isa = PBXGroup;
+			children = (
+				044706572958446B00BBAB2E /* CYAlphaMTCIVideoView.m */,
+				044706582958446B00BBAB2E /* CYBaseVideoView.h */,
+				044706592958446B00BBAB2E /* CYMTKView.m */,
+				0447065A2958446B00BBAB2E /* CYBaseVideoView.m */,
+				0447065B2958446B00BBAB2E /* CYAlphaMTCIVideoView.h */,
+				0447065C2958446B00BBAB2E /* CYMTKView.h */,
+			);
+			path = AlphaVideo;
+			sourceTree = "<group>";
+		};
+		04470666295862D000BBAB2E /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				04470667295862E900BBAB2E /* PrankManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		5D1CCCED28C09EE300E67897 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04470664295854EB00BBAB2E /* dinner.mp4 */,
 				044706502957315100BBAB2E /* prank.webp */,
 				5D1CCCF228C09EFA00E67897 /* Localizable.strings */,
 			);
@@ -442,6 +478,7 @@
 		5DB006F5285C830A00EA3A66 /* message */ = {
 			isa = PBXGroup;
 			children = (
+				04470666295862D000BBAB2E /* manager */,
 				5D9E42C0288FD0C500388A73 /* model */,
 				5D521D0A2872C36300BD9A43 /* layout */,
 				5DEBCE1F28655E5200886437 /* vc */,
@@ -690,6 +727,7 @@
 		5DEBCE2228655E5200886437 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				044706562958446B00BBAB2E /* AlphaVideo */,
 				5DCA3A9C286EEB5300311D57 /* message_cell */,
 				5DEBCE2528655E7800886437 /* MessageServerListView.swift */,
 				5DFC4404286BE8CC00FB4483 /* MessageItemCell.swift */,
@@ -765,6 +803,7 @@
 				5DF53CAF284EE6130007EEED /* Assets.xcassets */,
 				5DF53CB1284EE6130007EEED /* LaunchScreen.storyboard */,
 				5DF53CB4284EE6130007EEED /* Info.plist */,
+				04470663295847CD00BBAB2E /* discord-ios-Bridging-Header.h */,
 			);
 			path = "discord-ios";
 			sourceTree = "<group>";
@@ -899,6 +938,7 @@
 				044706512957315100BBAB2E /* prank.webp in Resources */,
 				5D521D142872DF6300BD9A43 /* ChatInputView.xib in Resources */,
 				5DB006F1285C67DE00EA3A66 /* LoginViewController.xib in Resources */,
+				04470665295854EB00BBAB2E /* dinner.mp4 in Resources */,
 				5DCA3A8D286E9F3A00311D57 /* ConversationCell.xib in Resources */,
 				5D61A9382897B73900AC1F4E /* MessageServerChannelHeader.xib in Resources */,
 				5DEBCE2328655E5200886437 /* MessageViewController.xib in Resources */,
@@ -978,6 +1018,7 @@
 				5D521D122872DE7F00BD9A43 /* ChatInputView.swift in Sources */,
 				5DFC440E286BF95100FB4483 /* MessageServerViewController.swift in Sources */,
 				5DCA3A86286D8DAF00311D57 /* ChannelCreateViewController.swift in Sources */,
+				04470668295862E900BBAB2E /* PrankManager.swift in Sources */,
 				5DE0751D289CE7C0008B26E6 /* IEMChatManager+send.swift in Sources */,
 				5D96271028BE0FE300A4F615 /* UserStatusView.swift in Sources */,
 				5D6B081D28991545003066AD /* EMChatMessage+showText.swift in Sources */,
@@ -1019,6 +1060,7 @@
 				5D055D51288A3BD90069D580 /* ChatInputMoreView.swift in Sources */,
 				5D8B5470287538660058FF77 /* ChatBottomMenuViewItemCell.swift in Sources */,
 				5DEBCE2628655E7800886437 /* MessageServerListView.swift in Sources */,
+				0447065E2958446B00BBAB2E /* CYMTKView.m in Sources */,
 				5D88B1EA28ACBB8C00117F03 /* PHPhotoLibrary+auth.swift in Sources */,
 				5DEADCDF2898BB570082F203 /* MessageServerThreadListFooter.swift in Sources */,
 				5DB0070528615BD000EA3A66 /* MainViewController.swift in Sources */,
@@ -1039,6 +1081,7 @@
 				5D6D096828AE490700AFA2ED /* UITabBar+badge.swift in Sources */,
 				5DCA3AA6286F092700311D57 /* MessageCommonView.swift in Sources */,
 				5D1CCD0028C5CBF300E67897 /* MessageServerListLayout.swift in Sources */,
+				0447065F2958446B00BBAB2E /* CYBaseVideoView.m in Sources */,
 				5D969DC72875869B008BEBC2 /* MessageReactionListView.swift in Sources */,
 				5DCA3AA4286F045F00311D57 /* MessageTextCell.swift in Sources */,
 				5DE7030E286995DC00C4A099 /* ContactsTableViewCell.swift in Sources */,
@@ -1060,6 +1103,7 @@
 				5D9E42C2288FD0D700388A73 /* ChatType.swift in Sources */,
 				5D61A92528922F1700AC1F4E /* MessageFileView.swift in Sources */,
 				5DCA3A70286C60A400311D57 /* MessageServerChannelCell.swift in Sources */,
+				0447065D2958446B00BBAB2E /* CYAlphaMTCIVideoView.m in Sources */,
 				5D521D0F2872C8D200BD9A43 /* EmojiListCollectionViewCell.swift in Sources */,
 				5D521D0C2872C38800BD9A43 /* EmojiKeyboardLayout.swift in Sources */,
 				5DEBCE342865C5AB00886437 /* ServerCreateIconButton.swift in Sources */,
@@ -1248,6 +1292,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Piwan_Dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/discord-ios/discord-ios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1293,6 +1338,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Piwan_Dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/discord-ios/discord-ios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

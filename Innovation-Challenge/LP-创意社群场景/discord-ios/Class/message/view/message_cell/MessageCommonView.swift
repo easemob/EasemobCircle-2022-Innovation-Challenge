@@ -45,6 +45,7 @@ class MessageCommonView: UIView {
         prankView.image = YYImage.init(named: "prank.webp")
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.prankView.image = YYImage()
+            PrankManager.share.curPrankUid = ""
         }
     }
     
