@@ -26,6 +26,8 @@ class ChatViewController: BaseViewController {
     
     private var messageList: [EMChatMessage] = []
     
+    let showMP4GiftPlayer = CYAlphaMTCIVideoView()
+    
     private lazy var currentConversation: EMConversation? = {
         switch self.chatType {
         case .group, .single:
@@ -847,6 +849,8 @@ extension ChatViewController: ChatBottomMenuViewDelegate {
                     PrankManager.share.curPrankUid = userId
                     //主态
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PRANK-Notify"), object: userId, userInfo: nil)
+                    
+                    self.showMp4()
                 }
                 
             }
@@ -863,6 +867,16 @@ extension ChatViewController: ChatBottomMenuViewDelegate {
             return message.getReaction(imageName)?.isAddedBySelf ?? false
         }
         return false
+    }
+    
+    func showMp4() {
+        showMP4GiftPlayer.isHidden = false
+        showMP4GiftPlayer.delegate = self
+        self.view.addSubview(showMP4GiftPlayer)
+        showMP4GiftPlayer.frame = self.view.bounds
+        showMP4GiftPlayer.loopCount = 1
+        let mp4 = Bundle.main.url(forResource: "love", withExtension: "mp4")
+        showMP4GiftPlayer.setVideoPathURL(mp4!)
     }
     
     private func didClickThreadItem(message: EMChatMessage) {
@@ -1060,5 +1074,12 @@ extension ChatViewController: EMCircleManagerChannelDelegate {
         default:
             break
         }
+    }
+}
+
+extension ChatViewController: GLBaseVideoViewDelegate {
+    func videoPlayerDidLoop(toEnd player: CYBaseVideoView) {
+        showMP4GiftPlayer.isHidden = true
+        showMP4GiftPlayer.stopCurrentPlayItem()
     }
 }

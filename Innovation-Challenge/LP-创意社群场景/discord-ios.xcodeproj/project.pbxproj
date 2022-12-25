@@ -12,8 +12,8 @@
 		0447065D2958446B00BBAB2E /* CYAlphaMTCIVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044706572958446B00BBAB2E /* CYAlphaMTCIVideoView.m */; };
 		0447065E2958446B00BBAB2E /* CYMTKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044706592958446B00BBAB2E /* CYMTKView.m */; };
 		0447065F2958446B00BBAB2E /* CYBaseVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0447065A2958446B00BBAB2E /* CYBaseVideoView.m */; };
-		04470665295854EB00BBAB2E /* dinner.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04470664295854EB00BBAB2E /* dinner.mp4 */; };
 		04470668295862E900BBAB2E /* PrankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04470667295862E900BBAB2E /* PrankManager.swift */; };
+		044706802958725B00BBAB2E /* love.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0447067F2958725B00BBAB2E /* love.mp4 */; };
 		5D055D3728801FE00069D580 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D3628801FE00069D580 /* NotificationNames.swift */; };
 		5D055D4B28865CB30069D580 /* ServerInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D4A28865CB30069D580 /* ServerInfoManager.swift */; };
 		5D055D51288A3BD90069D580 /* ChatInputMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D055D50288A3BD90069D580 /* ChatInputMoreView.swift */; };
@@ -160,8 +160,8 @@
 		0447065B2958446B00BBAB2E /* CYAlphaMTCIVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlphaMTCIVideoView.h; sourceTree = "<group>"; };
 		0447065C2958446B00BBAB2E /* CYMTKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMTKView.h; sourceTree = "<group>"; };
 		04470663295847CD00BBAB2E /* discord-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "discord-ios-Bridging-Header.h"; sourceTree = "<group>"; };
-		04470664295854EB00BBAB2E /* dinner.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinner.mp4; sourceTree = "<group>"; };
 		04470667295862E900BBAB2E /* PrankManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrankManager.swift; sourceTree = "<group>"; };
+		0447067F2958725B00BBAB2E /* love.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = love.mp4; sourceTree = "<group>"; };
 		5D055D3628801FE00069D580 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		5D055D4A28865CB30069D580 /* ServerInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoManager.swift; sourceTree = "<group>"; };
 		5D055D50288A3BD90069D580 /* ChatInputMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputMoreView.swift; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 		5D1CCCED28C09EE300E67897 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04470664295854EB00BBAB2E /* dinner.mp4 */,
+				0447067F2958725B00BBAB2E /* love.mp4 */,
 				044706502957315100BBAB2E /* prank.webp */,
 				5D1CCCF228C09EFA00E67897 /* Localizable.strings */,
 			);
@@ -915,6 +915,7 @@
 				5DCA3A7F286D4CD300311D57 /* ServerJoinAlertViewController.xib in Resources */,
 				5D1EC124287E72B60016D766 /* ThreadListViewController.xib in Resources */,
 				5D9E42C62890D62B00388A73 /* MessageThreadView.xib in Resources */,
+				044706802958725B00BBAB2E /* love.mp4 in Resources */,
 				5DEADCE12898BB5F0082F203 /* MessageServerThreadListFooter.xib in Resources */,
 				5DCA3A87286D8DAF00311D57 /* ChannelCreateViewController.xib in Resources */,
 				5DF53CB0284EE6130007EEED /* Assets.xcassets in Resources */,
@@ -938,7 +939,6 @@
 				044706512957315100BBAB2E /* prank.webp in Resources */,
 				5D521D142872DF6300BD9A43 /* ChatInputView.xib in Resources */,
 				5DB006F1285C67DE00EA3A66 /* LoginViewController.xib in Resources */,
-				04470665295854EB00BBAB2E /* dinner.mp4 in Resources */,
 				5DCA3A8D286E9F3A00311D57 /* ConversationCell.xib in Resources */,
 				5D61A9382897B73900AC1F4E /* MessageServerChannelHeader.xib in Resources */,
 				5DEBCE2328655E5200886437 /* MessageViewController.xib in Resources */,
