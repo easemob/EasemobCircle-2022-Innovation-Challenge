@@ -18,6 +18,7 @@
 ## 告白
 <span><img src="https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-创意社群场景/305_1672053573.gif?raw=true!" width="200px"></span>
 
+[GIF-IMAGE](https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-创意社群场景/305_1672053573.gif?raw=true!)
 
 ## 代码许可
 示例项目遵守 MIT 许可证。
