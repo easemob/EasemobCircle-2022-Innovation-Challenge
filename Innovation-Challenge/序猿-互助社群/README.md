@@ -12,7 +12,11 @@
 <span><img src="https://user-images.githubusercontent.com/15797691/209430308-8e4355b4-da6d-41d6-a0c8-335d57a990b2.png" width="200px"></span>
 <span><img src="https://user-images.githubusercontent.com/15797691/209430691-bf00f047-d81f-4e23-8a3e-35ddc41fde77.png" width="200px"></span>
 
-[image](https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-创意社群场景/305_1672053573.gif?raw=true!)
+[image]()
+
+<span><img src="https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-创意社群场景/305_1672053573.gif?raw=true!" width="200px"></span>
+
+<span><img src="https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-创意社群场景/305_1672053573.gif" width="200px"></span>
 
 
 ## 代码许可
