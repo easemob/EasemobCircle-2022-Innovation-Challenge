@@ -1,0 +1,9 @@
+included: # 检测以下路径的文件
+  - discord-ios/Class
+disabled_rules: # 以下规则不生效
+  - line_length
+  - identifier_name
+  - force_cast
+  - trailing_whitespace
+  - large_tuple
+  - legacy_random

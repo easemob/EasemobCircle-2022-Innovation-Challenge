@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageViewController" customModule="discord_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="rightView" destination="GMm-wl-frp" id="sp9-r6-1He"/>
+                <outlet property="serverListView" destination="YBe-ab-HJR" id="wGM-tM-PdF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBe-ab-HJR" customClass="MessageServerListView" customModule="discord_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="66" height="818"/>
+                    <color key="backgroundColor" name="#1F1F1F"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="NyH-dq-k9d"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMm-wl-frp">
+                    <rect key="frame" x="66" y="44" width="348" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="#181818"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YBe-ab-HJR" secondAttribute="bottom" id="BKQ-nO-8a4"/>
+                <constraint firstItem="YBe-ab-HJR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lya-02-Ayy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GMm-wl-frp" secondAttribute="bottom" id="Pow-7b-106"/>
+                <constraint firstItem="GMm-wl-frp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fhK-2Q-XI2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GMm-wl-frp" secondAttribute="trailing" id="h8T-MO-WmG"/>
+                <constraint firstItem="YBe-ab-HJR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rcb-Wm-izG"/>
+                <constraint firstItem="GMm-wl-frp" firstAttribute="leading" secondItem="YBe-ab-HJR" secondAttribute="trailing" id="s7V-5p-UYF"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="72"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="#181818">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#1F1F1F">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

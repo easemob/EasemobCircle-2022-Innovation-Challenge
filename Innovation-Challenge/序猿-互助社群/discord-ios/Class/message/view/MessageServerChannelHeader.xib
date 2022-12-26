@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="MessageServerChannelHeader" customModule="discord_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-gk-kVE">
+                    <rect key="frame" x="12" y="15" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="XaF-b4-l3F"/>
+                        <constraint firstAttribute="height" constant="14" id="qAf-qV-KKu"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="arrow_fold"/>
+                    <connections>
+                        <action selector="foldAction" destination="-1" eventType="touchUpInside" id="Th8-bk-SmO"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.73999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文字频道" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe6-rJ-MBh">
+                    <rect key="frame" x="32" y="15" width="49.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvI-kg-JfF">
+                    <rect key="frame" x="382" y="11" width="20" height="22"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="plus"/>
+                    <connections>
+                        <action selector="createAction" destination="-1" eventType="touchUpInside" id="8rq-Vc-ZJr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vs0-gk-kVE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2t2-74-bV8"/>
+                <constraint firstItem="yvI-kg-JfF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QMs-Vg-Iz7"/>
+                <constraint firstAttribute="trailing" secondItem="yvI-kg-JfF" secondAttribute="trailing" constant="12" id="fD0-d5-c9g"/>
+                <constraint firstItem="fe6-rJ-MBh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n48-WZ-eoM"/>
+                <constraint firstItem="vs0-gk-kVE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="oR9-Fq-g7U"/>
+                <constraint firstItem="fe6-rJ-MBh" firstAttribute="leading" secondItem="vs0-gk-kVE" secondAttribute="trailing" constant="6" id="xGP-MD-jvv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="createButton" destination="yvI-kg-JfF" id="2oo-iv-K6x"/>
+                <outlet property="foldButton" destination="vs0-gk-kVE" id="dVc-uy-pxM"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_fold" width="14" height="14"/>
+        <image name="plus" width="20" height="20"/>
+    </resources>
+</document>
