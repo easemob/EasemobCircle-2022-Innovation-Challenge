@@ -1,13 +1,12 @@
-import React, { memo, useState, useEffect } from "react";
-import s from "./index.module.less";
-import Icon from "@/components/Icon";
-import { connect } from "react-redux";
-import { getTimeDiff, renderTxt } from "@/utils/common";
-import { useParams } from "react-router-dom";
-import WebIM from "@/utils/WebIM";
 import AvatarInfo from "@/components/AvatarInfo";
-import InfiniteScroll from "react-infinite-scroll-component";
 import CloseIcon from "@/components/CloseIcon";
+import { getTimeDiff, renderTxt } from "@/utils/common";
+import WebIM from "@/utils/WebIM";
+import React, { memo, useEffect, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { connect } from "react-redux";
+import { useParams } from "react-router-dom";
+import s from "./index.module.less";
 
 const SCROLL_WARP_ID = "threadListScrollId";
 const LIMIT = 20;
@@ -106,7 +105,7 @@ const ThreadList = (props) => {
                                     {option.lastMessage && JSON.stringify(option.lastMessage) !== "{}" ?
                                         <div className={s.itemBottom}>
                                             <div className={s.leftCon}>
-                                                <div className={s.avatar}><AvatarInfo size={16} src={appUserInfo[option.lastMessage?.from]?.avatarurl} /></div>
+                                                <div className={s.avatar}><AvatarInfo size={16} src={appUserInfo[option.lastMessage?.from]?.avatarurl} robot={appUserInfo[option.lastMessage?.from]?.robot} /></div>
                                                 <div className={s.ownerName}>
                                                     <span className={s.itemOwner}>{appUserInfo[option.lastMessage?.from]?.nickname ||
                                                         option.lastMessage.from}</span>

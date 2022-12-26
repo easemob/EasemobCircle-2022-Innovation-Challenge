@@ -1,11 +1,11 @@
-import s from "./index.module.less";
-import React, { memo, createRef } from "react";
 import Icon from "@/components/Icon";
-import { Dropdown, Menu, message, Tooltip } from "antd";
-import EmojiPicker from "../Emoji";
-import WebIM from "@/utils/WebIM";
 import { addReactions } from "@/utils/common";
+import WebIM from "@/utils/WebIM";
+import { Dropdown, Menu, message, Tooltip } from "antd";
+import React, { createRef, memo } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import EmojiPicker from "../Emoji";
+import s from "./index.module.less";
 
 const antdMessage = message;
 const Operation = (props) => {
@@ -13,7 +13,8 @@ const Operation = (props) => {
 
   const OPERATION = {
     1: "recall",
-    2: "copy"
+    2: "copy",
+    3: "translate"
   };
   const menu = (type) => {
     const itemList = [];
@@ -49,6 +50,18 @@ const Operation = (props) => {
               <span className="circleDropMenuOp">复制</span>
             </div>
           </CopyToClipboard>
+        )
+      }, {
+        key: "3",
+        label: (
+          <div className="circleDropItem">
+            <Icon
+              name="square_2-01"
+              size="24px"
+              iconClass="circleDropMenuIcon"
+            />
+            <span className="circleDropMenuOp">翻译</span>
+          </div>
         )
       });
     }
@@ -88,18 +101,18 @@ const Operation = (props) => {
               }}
             >
               <div>
-                <Icon name={"emoji_plus"} size={"18px"} iconClass="messageOperationIcon"/>
+                <Icon name={"emoji_plus"} size={"18px"} iconClass="messageOperationIcon" />
               </div>
             </Tooltip>
           </EmojiPicker>
         </div>
         {
-          source=== "groupChat" && <Tooltip title={canCreateThread ? "创建子区" : "显示子区"} overlayClassName="toolTip">
+          source === "groupChat" && <Tooltip title={canCreateThread ? "创建子区" : "显示子区"} overlayClassName="toolTip">
             <div
               className={s.iconItem}
               onClick={() => canCreateThread ? operation("createThread") : operation("openThreadPanel")}
             >
-              <Icon name="hashtag_message" size="18px" iconClass="messageOperationIcon"/>
+              <Icon name="hashtag_message" size="18px" iconClass="messageOperationIcon" />
             </div>
           </Tooltip>
         }
@@ -114,7 +127,7 @@ const Operation = (props) => {
             }
           >
             <div className={s.iconItem}>
-              <Icon name={"ellipsis"} size={"18px"} iconClass="messageOperationIcon"/>
+              <Icon name={"ellipsis"} size={"18px"} iconClass="messageOperationIcon" />
             </div>
           </Dropdown>
         )}

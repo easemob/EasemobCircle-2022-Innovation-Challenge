@@ -1,11 +1,11 @@
-import React, { memo } from "react";
-import s from "./index.module.less";
 import AvatarInfo from "@/components/AvatarInfo";
-import { connect } from "react-redux";
-import { Modal, Dropdown, Menu } from 'antd';
-import { useNavigate } from "react-router-dom";
-import WebIM from "@/utils/WebIM";
 import Icon from "@/components/Icon";
+import WebIM from "@/utils/WebIM";
+import { Dropdown, Menu, Modal } from 'antd';
+import React, { memo } from "react";
+import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import s from "./index.module.less";
 
 
 const ContactDetail = (props) => {
@@ -73,7 +73,7 @@ const ContactDetail = (props) => {
             <div className={s.infoCon}>
                 <div className={s.userInfo}>
                     <div className={s.avatar}>
-                        <AvatarInfo size={90} src={appUserInfo[userId]?.avatarurl} online={appUserInfo[userId]?.online} />
+                        <AvatarInfo size={90} src={appUserInfo[userId]?.avatarurl} online={appUserInfo[userId]?.online} robot={appUserInfo[userId]?.robot} />
                     </div>
                     <div className={s.nickname}>{appUserInfo[userId]?.nickname || userId}</div>
                     <div className={s.idInfo}>环信ID：{userId}</div>

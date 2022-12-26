@@ -1,13 +1,13 @@
 import AvatarInfo from "@/components/AvatarInfo";
+import CardMsg from "@/components/CustomMessage/CardMsg";
+import CodeMsg from '@/components/CustomMessage/CodeMsg';
+import CustomMsg from "@/components/CustomMessage/InviteMsg";
+import SignInCardMsg from "@/components/CustomMessage/SignInCardMsg";
 import FileMsg from "@/components/FileMsg";
 import ImgMsg from "@/components/ImgMsg";
 import Operation from "@/components/MsgOperation";
 import ReactionMsg from "@/components/ReactionMsg";
 import RecallMsg from "@/components/RecallMsg";
-import CustomMsg from "@/components/CustomMessage/InviteMsg";
-import SignInCardMsg from "@/components/CustomMessage/SignInCardMsg";
-import CardMsg from "@/components/CustomMessage/CardMsg";
-import CodeMsg from '@/components/CustomMessage/CodeMsg'
 import ThreadMsg from "@/components/ThreadMsg";
 import TxtMsg from "@/components/TxtMsg";
 import { CUSTOM_MSG_TYPE, MESSAGE_ITEM_SOURCE } from "@/consts";
@@ -35,7 +35,7 @@ const Message = (props) => {
     return reactionMap.get(message.id) || [];
   }, [reactionMap, message.id]);
 
-  //消息操作 撤回、复制
+  //消息操作 撤回、复制、翻译
   const handleOperation = (operation) => {
     onHandleOperation(operation, isThreadMessage, message);
   };
@@ -116,7 +116,7 @@ const Message = (props) => {
             onVisibleChange={handleUserPanel}
             trigger="click"
           >
-            <AvatarInfo size={36} src={appUserInfo[message.from]?.avatarurl} robot={appUserInfo[message.from]?.robot} />
+            <AvatarInfo size={36} src={appUserInfo[message.from]?.avatarurl} robot={appUserInfo[message.from]?.robot || message.ext?.robot} />
           </Popover>
         </div>
 
@@ -132,7 +132,7 @@ const Message = (props) => {
                  * robot 也先取ext 里面的robot, 没有就取appUserInfo 里面的 robot
                  * robot 1 是频道专属机器人, 2 是 webhook 机器人
                  */
-                (appUserInfo[message.from]?.robot || message.ext?.robot) && <span className={`${s.tag} ${(appUserInfo[message.from]?.robot || message.ext?.robot) === 1 ? s.spec : ''}`}>BOT</span>
+                (appUserInfo[message.from]?.robot || message.ext?.robot) && <span className={`${s.tag} ${(appUserInfo[message.from]?.robot || message.ext?.robot) == 1 ? s.spec : ''}`}>BOT</span>
               }
               <span className={s.date}>{renderTime(message.time)}</span>
             </div>

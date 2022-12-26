@@ -7,7 +7,7 @@ import {
 import {
   createMsg,
   deliverMsg, getThreadParentMsg,
-  recallMessage
+  recallMessage, translateMessage
 } from "@/utils/common";
 import WebIM from "@/utils/WebIM";
 import { message, Spin } from "antd";
@@ -230,6 +230,9 @@ const Channel = (props) => {
         break;
       case "recall":
         recallMessage(data, isChatThread);
+        break;
+      case "translate":
+        translateMessage(data, isChatThread)
         break;
       default:
         break;
