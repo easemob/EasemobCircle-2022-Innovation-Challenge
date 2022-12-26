@@ -16,7 +16,8 @@
 <span><img src="https://user-images.githubusercontent.com/15797691/209541403-1827897e-d0fe-4698-b2af-14f3609fa80c.gif" width="200px"></span>
 
 ## 告白
-<span><img src="https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-%E5%88%9B%E6%84%8F%E7%A4%BE%E7%BE%A4%E5%9C%BA%E6%99%AF/305_1672053573.gif?raw=true" width="200px"></span>
+<span><img src="https://github.com/Jacky-LinPeng/EasemobCircle-2022-Innovation-Challenge/blob/master/Innovation-Challenge/LP-创意社群场景/305_1672053573.gif?raw=true!" width="200px"></span>
+
 
 ## 代码许可
 示例项目遵守 MIT 许可证。
