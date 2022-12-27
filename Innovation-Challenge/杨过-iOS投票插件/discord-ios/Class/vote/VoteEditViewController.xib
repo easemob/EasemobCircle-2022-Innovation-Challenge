@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoteEditViewController" customModule="discord_ios" customModuleProvider="target">
             <connections>
+                <outlet property="deadlineButton" destination="r4g-Jt-59l" id="TzW-B4-gV3"/>
+                <outlet property="describeTextField" destination="wjE-Cb-j2c" id="2hH-Fc-VaP"/>
                 <outlet property="optionsTableView" destination="YXB-IL-zuH" id="1Qu-x3-14g"/>
+                <outlet property="optionsTableViewHeight" destination="nFB-Je-4qC" id="4LA-O0-bzD"/>
+                <outlet property="titleTextField" destination="yem-EU-oPc" id="IOu-9Q-rFB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -76,6 +80,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="添加选项"/>
+                                            <connections>
+                                                <action selector="addOptionClick:" destination="-1" eventType="touchUpInside" id="TvS-40-fLE"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="options_add" translatesAutoresizingMaskIntoConstraints="NO" id="sAI-Cu-Ovc">
                                             <rect key="frame" x="15" y="276" width="20" height="20"/>
@@ -131,22 +138,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击选择截止日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQP-Jq-UAg">
-                                                    <rect key="frame" x="284.5" y="16.5" width="114.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4g-Jt-59l">
+                                                    <rect key="frame" x="300" y="11.5" width="99" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="点击选择截止日期">
+                                                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deadlineButtonClick:" destination="-1" eventType="touchUpInside" id="B5P-Yr-lUk"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="r4g-Jt-59l" secondAttribute="trailing" constant="15" id="8LV-1x-bRh"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZKf-rq-jMo" secondAttribute="trailing" constant="15" id="GAg-pU-xFD"/>
                                                 <constraint firstItem="ZKf-rq-jMo" firstAttribute="leading" secondItem="icD-T0-mve" secondAttribute="leading" constant="15" id="Pdw-Nt-bNE"/>
                                                 <constraint firstAttribute="height" constant="50" id="TGr-eo-9gq"/>
-                                                <constraint firstItem="EQP-Jq-UAg" firstAttribute="centerY" secondItem="icD-T0-mve" secondAttribute="centerY" id="TN1-5G-JvZ"/>
+                                                <constraint firstItem="r4g-Jt-59l" firstAttribute="centerY" secondItem="icD-T0-mve" secondAttribute="centerY" id="bqS-HU-WmD"/>
                                                 <constraint firstItem="EVj-up-GLj" firstAttribute="leading" secondItem="icD-T0-mve" secondAttribute="leading" constant="15" id="c7p-Cu-CcD"/>
                                                 <constraint firstItem="EVj-up-GLj" firstAttribute="centerY" secondItem="icD-T0-mve" secondAttribute="centerY" id="c95-TJ-07I"/>
-                                                <constraint firstAttribute="trailing" secondItem="EQP-Jq-UAg" secondAttribute="trailing" constant="15" id="ly2-bG-kvV"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZKf-rq-jMo" secondAttribute="bottom" id="uZo-Ap-B4M"/>
                                             </constraints>
                                         </view>
@@ -237,6 +249,9 @@
                                             <integer key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="submit:" destination="-1" eventType="touchUpInside" id="u8l-xQ-h4v"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemGray6Color"/>
