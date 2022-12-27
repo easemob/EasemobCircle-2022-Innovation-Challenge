@@ -1,16 +1,16 @@
-import React, { memo, useEffect, useState, useMemo } from "react";
-import s from "./index.module.less";
-import Header from "./components/Header";
+import Input from "@/components/Input";
+import MessageLeft from "@/components/MessageLeft";
+import { CHAT_TYPE, MESSAGE_ITEM_SOURCE, SCROLL_WARP_ID } from "@/consts";
+import { getUsersInfo, recallMessage, translateMessage } from "@/utils/common";
+import WebIM from "@/utils/WebIM";
+import { Spin } from "antd";
+import React, { memo, useEffect, useMemo, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
-import MessageLeft from "@/components/MessageLeft";
-import Input from "@/components/Input";
-import { CHAT_TYPE, MESSAGE_ITEM_SOURCE, SCROLL_WARP_ID } from "@/consts";
-import WebIM from "@/utils/WebIM";
-import { recallMessage, getUsersInfo } from "@/utils/common";
-import { Spin } from "antd";
 import ContactDetail from "./components/ContactDetail";
-import InfiniteScroll from "react-infinite-scroll-component";
+import Header from "./components/Header";
+import s from "./index.module.less";
 
 const PAGE_SIZE = 20;
 
@@ -83,6 +83,9 @@ const Chat = (props) => {
             setVisible(true);
           })
         }
+        break;
+      case "translate":
+        translateMessage(data, isThreadMessage)
         break;
       default:
         break;

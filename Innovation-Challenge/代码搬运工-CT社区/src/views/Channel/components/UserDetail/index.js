@@ -1,12 +1,12 @@
-import React, { memo, useMemo, useEffect, useState } from "react";
-import s from "./index.module.less";
 import AvatarInfo from "@/components/AvatarInfo";
+import Icon from "@/components/Icon";
+import { KICK, MUTE, UN_MUTE, USER_ROLE } from "@/consts";
+import WebIM from "@/utils/WebIM";
+import { Menu, message } from "antd";
+import React, { memo, useEffect, useMemo, useState } from "react";
 import { connect } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import Icon from "@/components/Icon";
-import { Menu, message } from "antd";
-import { UN_MUTE, MUTE, KICK, USER_ROLE } from "@/consts";
-import WebIM from "@/utils/WebIM";
+import s from "./index.module.less";
 
 const ChannelUserDetail = (props) => {
   const { userId, appUserInfo, currentChannelInfo, serverRole, setSelected } = props;
@@ -104,6 +104,9 @@ const ChannelUserDetail = (props) => {
     if (muteId.includes(userId)) {
       roleMenu.push(UN_MUTE);
     } else {
+      if (appUserInfo[userId]?.robot) {
+        return
+      }
       roleMenu.push(MUTE);
     }
     currentChannelInfo?.defaultChannel !== 1 && roleMenu.push(KICK);
@@ -129,13 +132,19 @@ const ChannelUserDetail = (props) => {
       <div className={s.infoCon}>
         <div className={s.left}>
           <div className={s.avatar}>
-            <AvatarInfo size={56} src={appUserInfo[userId]?.avatarurl} />
+            <AvatarInfo size={56} src={appUserInfo[userId]?.avatarurl} robot={appUserInfo[userId]?.robot} />
           </div>
           <div className={s.info}>
             <div className={s.nickname}>
               {appUserInfo[userId]?.nickname || userId}
+              {
+                /**
+                 * robot 1 是频道专属机器人, 2 是 webhook 机器人
+                 */
+                (appUserInfo[userId]?.robot) && <span className={`${s.tag} ${appUserInfo[userId]?.robot == 1 ? s.spec : ''}`}>BOT</span>
+              }
             </div>
-            <div className={s.idName}>环信ID：{userId}</div>
+            {(!appUserInfo[userId]?.robot) && <div className={s.idName}>环信ID：{userId}</div>}
           </div>
         </div>
         {canOpt && (
@@ -155,12 +164,15 @@ const ChannelUserDetail = (props) => {
           </div>
         )}
       </div>
-      <div className={s.toChat}>
-        <span className={s.chatCon} onClick={toChat}>
-          <Icon name="message" size="24px" color="rgba(255,255,255,.74)" />
-          <span className={s.private}>私聊</span>
-        </span>
-      </div>
+      {
+        (!appUserInfo[userId]?.robot) &&
+        <div className={s.toChat}>
+          <span className={s.chatCon} onClick={toChat}>
+            <Icon name="message" size="24px" color="rgba(255,255,255,.74)" />
+            <span className={s.private}>私聊</span>
+          </span>
+        </div>
+      }
     </div>
   );
 };

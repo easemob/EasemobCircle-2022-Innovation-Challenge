@@ -1,13 +1,13 @@
-import React, { memo, useState } from "react";
-import s from "./index.module.less";
 import AvatarInfo from "@/components/AvatarInfo";
-import { connect } from "react-redux";
-import WebIM from "@/utils/WebIM";
-import { Modal, message } from "antd";
-import UploadImg from "@/components/UploadImg";
-import Icon from "@/components/Icon";
 import CloseIcon from "@/components/CloseIcon";
+import Icon from "@/components/Icon";
+import UploadImg from "@/components/UploadImg";
 import { resetFrequentlyEmoji } from "@/utils/common";
+import WebIM from "@/utils/WebIM";
+import { message, Modal } from "antd";
+import React, { memo, useState } from "react";
+import { connect } from "react-redux";
+import s from "./index.module.less";
 
 const operationList = [
   {

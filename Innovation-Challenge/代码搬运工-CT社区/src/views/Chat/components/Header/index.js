@@ -1,12 +1,12 @@
-import React, { memo } from "react";
-import s from "./index.module.less";
-import HeaderWrap from "@/components/HeaderWrap";
 import AvatarInfo from "@/components/AvatarInfo";
-import { useParams, useNavigate } from "react-router-dom";
-import { connect } from "react-redux";
-import Icon from "@/components/Icon"
-import { Menu } from "antd";
+import HeaderWrap from "@/components/HeaderWrap";
+import Icon from "@/components/Icon";
 import WebIM from "@/utils/WebIM";
+import { Menu } from "antd";
+import React, { memo } from "react";
+import { connect } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import s from "./index.module.less";
 
 
 const ChannelHeader = (props) => {
@@ -33,7 +33,7 @@ const ChannelHeader = (props) => {
     <HeaderWrap>
       <div className={s.wrap}>
         <div className={s.left}>
-          <AvatarInfo size={36} online={appUserInfo[userId]?.online} src={appUserInfo[userId]?.avatarurl} />
+          <AvatarInfo size={36} online={appUserInfo[userId]?.online} src={appUserInfo[userId]?.avatarurl} robot={appUserInfo[userId]?.robot} />
           <span className={s.nickName}>{appUserInfo[userId]?.nickname || userId}</span>
         </div>
         <div className={s.op}>
