@@ -159,9 +159,10 @@ class ChatViewController: BaseViewController {
                     self.present(vc, animated: true)
                 }
             case .vote:
-                let vc = NavigationController(rootViewController: VoteEditViewController())
-                vc.modalPresentationStyle = .custom
-                self.present(vc, animated: true, completion: nil)
+//                let vc = NavigationController(rootViewController: VoteEditViewController())
+//                vc.modalPresentationStyle = .custom
+//                self.present(vc, animated: true, completion: nil)
+                self.navigationController?.pushViewController(VoteEditViewController(), animated: true)
             }
         }
         

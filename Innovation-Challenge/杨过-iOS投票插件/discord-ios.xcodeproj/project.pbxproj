@@ -145,6 +145,9 @@
 		5DFC440F286BF95100FB4483 /* MessageServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC440D286BF95100FB4483 /* MessageServerViewController.xib */; };
 		5DFC4412286C27A900FB4483 /* ServerEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC4410286C27A900FB4483 /* ServerEditViewController.swift */; };
 		5DFC4413286C27A900FB4483 /* ServerEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC4411286C27A900FB4483 /* ServerEditViewController.xib */; };
+		A1948533295B2BB100A54574 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A194852F295B2BB100A54574 /* UIColor+Ext.swift */; };
+		A1948534295B2BB100A54574 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1948530295B2BB100A54574 /* Colors.swift */; };
+		A1948535295B2BB100A54574 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1948531295B2BB100A54574 /* DatePickerDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -300,6 +303,9 @@
 		5DFC4410286C27A900FB4483 /* ServerEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEditViewController.swift; sourceTree = "<group>"; };
 		5DFC4411286C27A900FB4483 /* ServerEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerEditViewController.xib; sourceTree = "<group>"; };
 		7FD133DC21750EE76EE627C8 /* Pods-discord-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discord-ios.release.xcconfig"; path = "Target Support Files/Pods-discord-ios/Pods-discord-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A194852F295B2BB100A54574 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		A1948530295B2BB100A54574 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A1948531295B2BB100A54574 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		A1A4184C8D2737A08014A87A /* Pods_discord_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_discord_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9000D2A8E9A26AAC3E93CE5 /* Pods-discord-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discord-ios.debug.xcconfig"; path = "Target Support Files/Pods-discord-ios/Pods-discord-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +325,7 @@
 		4A226CD32941BB7F0047AD02 /* vote */ = {
 			isa = PBXGroup;
 			children = (
+				A194852E295B2BB100A54574 /* datePickerDialog */,
 				4A226CD42941BBEC0047AD02 /* VoteEditViewController.swift */,
 				4A226CD52941BBEC0047AD02 /* VoteEditViewController.xib */,
 				4A2FBCA5294860BB009C5173 /* VoteOptionsTableViewCell.swift */,
@@ -792,6 +799,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A194852E295B2BB100A54574 /* datePickerDialog */ = {
+			isa = PBXGroup;
+			children = (
+				A194852F295B2BB100A54574 /* UIColor+Ext.swift */,
+				A1948530295B2BB100A54574 /* Colors.swift */,
+				A1948531295B2BB100A54574 /* DatePickerDialog.swift */,
+			);
+			path = datePickerDialog;
+			sourceTree = "<group>";
+		};
 		B4803B6E341E40965E819AE5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1021,8 +1038,10 @@
 				5DC7A038287BCA1700B1BA3E /* ThreadCreateViewController.swift in Sources */,
 				5D88B1E828AA223200117F03 /* BigImageView.swift in Sources */,
 				5D6D096F28B318E100AFA2ED /* ColorNames.swift in Sources */,
+				A1948535295B2BB100A54574 /* DatePickerDialog.swift in Sources */,
 				5D61A92C28938B2800AC1F4E /* ThreadMessageHeadView.swift in Sources */,
 				5D61A9312893C89600AC1F4E /* ThreadUtils.swift in Sources */,
+				A1948533295B2BB100A54574 /* UIColor+Ext.swift in Sources */,
 				5DE7030A2869840C00C4A099 /* BaseViewController.swift in Sources */,
 				5DCA3A7A286D362600311D57 /* ServerMemberTableViewCell.swift in Sources */,
 				5D6B081B28990A20003066AD /* UIViewController+popover.swift in Sources */,
@@ -1056,6 +1075,7 @@
 				5DCA3AA6286F092700311D57 /* MessageCommonView.swift in Sources */,
 				5D1CCD0028C5CBF300E67897 /* MessageServerListLayout.swift in Sources */,
 				5D969DC72875869B008BEBC2 /* MessageReactionListView.swift in Sources */,
+				A1948534295B2BB100A54574 /* Colors.swift in Sources */,
 				5DCA3AA4286F045F00311D57 /* MessageTextCell.swift in Sources */,
 				5DE7030E286995DC00C4A099 /* ContactsTableViewCell.swift in Sources */,
 				5D1EC128287E741E0016D766 /* ThreadListTableViewCell.swift in Sources */,
