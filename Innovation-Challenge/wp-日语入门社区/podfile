@@ -1,0 +1,20 @@
+platform :ios, ‘10.0’
+inhibit_all_warnings!
+source 'https://github.com/CocoaPods/Specs.git'
+target 'japanese' do
+  pod 'Google-Mobile-Ads-SDK'
+pod 'SVProgressHUD'
+
+
+pod 'MBProgressHUD'
+pod 'Masonry'
+
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'FMDB'
+pod 'HyphenateChat'
+pod 'EaseIMKit'
+pod 'EaseCallKit'
+pod 'AgoraRtcEngine_iOS'
+pod 'Bugly'
+end
