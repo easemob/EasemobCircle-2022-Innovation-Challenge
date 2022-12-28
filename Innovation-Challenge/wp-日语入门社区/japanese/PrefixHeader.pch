@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  japanese
+//
+//  Created by Mac on 2022/12/28.
+//  Copyright © 2022 Hebe. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIViewController+Util.h"
+#import "UIViewController+HUD.h"
+#import <Masonry.h>
+#import "EMDefines.h"
+#import "EMColorDefine.h"
+#import "EaseCallDefine.h"
+#import "EaseIMKitManager.h"
+#import <HyphenateChat/HyphenateChat.h>
+#import "EMAlertController.h"
+#import "EMAlertView.h"
+#import "EaseMessageModel.h"
+#import "EMDemoOptions.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
